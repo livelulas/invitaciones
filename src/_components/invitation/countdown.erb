@@ -1,0 +1,26 @@
+<section
+  class="invitation-section <%= css_class %> invitation-section--dark"
+  style="<%= section_style_attr %>"
+  data-event-date="<%= invitation.date %>"
+>
+  <div class="invitation-section__content invitation-countdown__layout">
+    <div class="invitation-countdown__date-block">
+      <p class="invitation-countdown__date"><%= formatted_date_short %></p>
+      <p class="invitation-countdown__save">Save the Date</p>
+    </div>
+    <% if asset_url(assets&.countdown_photo) %>
+      <div class="invitation-countdown__photo">
+        <img src="<%= asset_url(assets.countdown_photo) %>" alt="Elena y Armando">
+      </div>
+    <% end %>
+    <div class="invitation-countdown__timer-block">
+      <p class="invitation-countdown__label">Estamos solo a</p>
+      <div class="invitation-countdown__grid" aria-live="polite">
+        <div class="invitation-countdown__unit">
+          <span class="invitation-countdown__value" data-countdown-days>--</span>
+          <span class="invitation-countdown__name">Días</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

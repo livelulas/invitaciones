@@ -1,0 +1,35 @@
+<section class="invitation-section <%= css_class %> invitation-section--travel" style="<%= section_style_attr %>">
+  <div class="invitation-section__content invitation-location__layout">
+    <div class="invitation-location__polaroids">
+      <% Array(assets&.travel_polaroids).each_with_index do |image, index| %>
+        <img
+          class="invitation-location__polaroid invitation-location__polaroid--<%= index + 1 %>"
+          src="<%= asset_url(image) %>"
+          alt="Elena y Armando"
+          loading="lazy"
+        >
+      <% end %>
+    </div>
+    <div class="invitation-location__copy">
+      <h2 class="invitation-section__title invitation-section__title--light"><%= content_data&.title || "Guía de Viajeros" %></h2>
+      <p class="invitation-location__message"><%= content_data&.message %></p>
+      <div class="invitation-location__actions">
+        <% if content_data&.guide_url && !content_data.guide_url.to_s.empty? %>
+          <a class="invitation-button invitation-button--light" href="<%= content_data.guide_url %>" target="_blank" rel="noopener">
+            <%= content_data.guide_label || "Guía" %>
+          </a>
+        <% else %>
+          <span class="invitation-button invitation-button--light invitation-button--disabled"><%= content_data&.guide_label || "Guía MTY" %></span>
+        <% end %>
+        <% if content_data&.hotel_url && !content_data.hotel_url.to_s.empty? %>
+          <a class="invitation-button invitation-button--light" href="<%= content_data.hotel_url %>" target="_blank" rel="noopener">
+            <%= content_data.hotel_label || "Hotel" %>
+          </a>
+        <% else %>
+          <span class="invitation-button invitation-button--light invitation-button--disabled"><%= content_data&.hotel_label || "Hotel Sede" %></span>
+        <% end %>
+        <span class="invitation-button invitation-button--light invitation-button--disabled"><%= content_data&.details_label || "Detalles" %></span>
+      </div>
+    </div>
+  </div>
+</section>

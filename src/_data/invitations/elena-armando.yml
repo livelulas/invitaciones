@@ -1,0 +1,200 @@
+slug: elena-armando
+title: Elena & Armando
+event_type: wedding
+date: "2026-10-17T16:00:00-06:00"
+rsvp_deadline: "2026-09-17"
+
+theme:
+  fonts:
+    heading: "Quattrocento"
+    body: "Quattrocento"
+    accent: "Quattrocento"
+  font_urls:
+    google: "https://fonts.googleapis.com/css2?family=Quattrocento:ital,wght@0,400;0,700;1,400&display=swap"
+  colors:
+    bg: "#faf8f4"
+    bg_alt: "#f3efe8"
+    bg_dark: "#4a382f"
+    bg_warm: "#6b5345"
+    accent: "#8d5524"
+    text: "#4a382f"
+    text_muted: "#7a6558"
+    text_light: "#ffffff"
+    grid_line: "rgba(74, 56, 47, 0.08)"
+  typography:
+    hero_title_size: "clamp(2.75rem, 12vw, 4.5rem)"
+    hero_title_weight: "400"
+    section_title_size: "2rem"
+    body_size: "1rem"
+    letter_spacing_heading: "0.12em"
+
+assets:
+  logo: "/images/invitations/elena-armando/elements/logo-transparent.png"
+  flourish: "/images/invitations/elena-armando/elements/12.svg"
+  hero_photo: "/images/invitations/elena-armando/elements/4.svg"
+  story_graphic: "/images/invitations/elena-armando/elements/story-graphic.png"
+  story_bg: "/images/invitations/elena-armando/elements/story-bg.png"
+  intro_photo: "/images/invitations/elena-armando/elements/story-photo.png"
+  countdown_photo: "/images/invitations/elena-armando/elements/5.svg"
+  parents_note: "/images/invitations/elena-armando/elements/3.svg"
+  parents_photo: "/images/invitations/elena-armando/elements/2.svg"
+  gallery:
+    - "/images/invitations/elena-armando/elements/6.svg"
+    - "/images/invitations/elena-armando/elements/4.svg"
+    - "/images/invitations/elena-armando/elements/5.svg"
+  schedule_icons:
+    religious: "/images/invitations/elena-armando/elements/7.svg"
+    ice_breaker: "/images/invitations/elena-armando/elements/8.svg"
+    reception: "/images/invitations/elena-armando/elements/9.svg"
+  hands_bg: "/images/invitations/elena-armando/elements/hands-bg.png"
+  travel_polaroids:
+    - "/images/invitations/elena-armando/elements/10.svg"
+    - "/images/invitations/elena-armando/elements/11.svg"
+
+sections:
+  hero:
+    enabled: true
+    background_color: null
+    background_image: "/images/invitations/elena-armando/elements/4.svg"
+    text_color: "#ffffff"
+  intro:
+    enabled: false
+    background_color: null
+    background_image: null
+    text_color: null
+  countdown:
+    enabled: false
+    background_color: "#4a382f"
+    background_image: null
+    text_color: "#ffffff"
+  story:
+    enabled: true
+    background_color: null
+    background_image: null
+    text_color: null
+  parents:
+    enabled: true
+    background_color: null
+    background_image: null
+    text_color: null
+  gallery:
+    enabled: true
+    background_color: "#4a382f"
+    background_image: null
+    text_color: "#ffffff"
+  schedule:
+    enabled: true
+    background_color: null
+    background_image: null
+    text_color: null
+  location:
+    enabled: true
+    background_color: "#6b5345"
+    background_image: null
+    text_color: "#ffffff"
+  lodging:
+    enabled: true
+    background_color: "#ffffff"
+    background_image: null
+    text_color: null
+  details:
+    enabled: true
+    background_color: null
+    background_image: null
+    text_color: null
+  gift:
+    enabled: true
+    background_color: "#4a382f"
+    background_image: null
+    text_color: "#ffffff"
+
+content:
+  hero:
+    name_lines:
+      - Elena
+      - "&"
+      - Armando
+    venue: "PARROQUIA EL ROSARIO | HACIENDA M"
+    tagline: "EL PRIMER PASO DE NUESTRO \"PARA SIEMPRE\""
+    cta_label: "CONFIRMA AQUÍ"
+    cta_url: "#details"
+  story:
+    text: "Bastó una feliz coincidencia para unir nuestros caminos y comenzar a escribir nuestra historia."
+    text_secondary: "Estamos felices de compartir este gran día con ustedes."
+    save_label: "Save the Date"
+    countdown_label: "Estamos solo a"
+    save_label: "Save the Date"
+    countdown_label: "Estamos solo a"
+  intro:
+    title: "Gracias a una feliz coincidencia"
+    text: "para unir nuestros caminos y comenzar a escribir nuestra historia."
+    text_secondary: "Estamos felices de compartir este gran día con ustedes."
+  parents:
+    message: "Gracias por ser nuestro apoyo incondicional y por guiarnos hasta este momento con su amor."
+    names:
+      - "Zoveida Serrano & Armando Guerrero"
+      - "Carmen Ávalos & Rafael Reyes"
+  schedule:
+    - title: Celebración Religiosa
+      time: "4:00 PM"
+      place: Parroquia del Rosario
+      address: ""
+      map_url: ""
+      icon_key: religious
+    - title: Ice Breaker
+      time: "7:30 PM"
+      place: Hacienda M
+      address: ""
+      map_url: ""
+      icon_key: ice_breaker
+    - title: Recepción
+      time: "8:30 PM"
+      place: Hacienda M
+      address: ""
+      map_url: ""
+      icon_key: reception
+  location:
+    title: "Guía de Viajeros"
+    message: "A todos los que viajan y cruzan distancias para acompañarnos: gracias de corazón por estar con nosotros en el día más importante."
+    guide_label: "Guía MTY"
+    guide_url: ""
+    hotel_label: "Hotel Sede"
+    hotel_url: ""
+    details_label: "Detalles"
+  lodging:
+    title: "Hotel Crowne Plaza"
+    phone: "800 839 9300"
+    image: "/images/invitations/elena-armando/hospedaje-elena-armando.png"
+    blocks:
+      - name: "Plan Europeo"
+        code: "EAD"
+        note: "Desayuno incluido"
+        rates:
+          - label: Estándar
+            prices: "Sencilla $1,627 | Doble $1,862 | Triple $2,335 | Cuádruple $2,808"
+          - label: Superior
+            prices: "Sencilla $1,865 | Doble $2,100 | Triple $2,573 | Cuádruple $3,046"
+          - label: Ejecutivo
+            prices: "Sencilla $2,103 | Doble $2,338 | Triple $2,811 | Cuádruple $3,284"
+      - name: "Plan Europeo"
+        code: "EAE"
+        note: "Desayuno incluido"
+        rates:
+          - label: Estándar
+            prices: "Sencilla o Doble $1,413 | Triple $1,651 | Cuádruple $1,889"
+          - label: Superior
+            prices: "Sencilla o Doble $1,651 | Triple $1,889 | Cuádruple $2,127"
+          - label: Ejecutivo
+            prices: "Sencilla o Doble $1,889 | Triple $2,129 | Cuádruple $2,365"
+  details:
+    guest_label: "Esta invitación es para"
+    closing_title: "Los esperamos"
+    dress_code_women: Vestido largo
+    dress_code_men: Traje completo
+    children: false
+    rsvp_message: "Favor de confirmar su asistencia antes del"
+  gift:
+    message: "Su presencia es nuestro mayor regalo. Si desean tener un detalle con nosotros para ayudarnos a construir nuestro nuevo hogar:"
+    transfer:
+      name: ELENA REYES AVALOS
+      account: "002180000011112222"

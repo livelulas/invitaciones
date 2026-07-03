@@ -1,0 +1,76 @@
+<section
+  class="invitation-section invitation-story"
+  style="<%= section_style_attr %>"
+  data-event-date="<%= invitation.date %>"
+>
+  <div
+    class="invitation-story__intro invitation-story__panel"
+    <% if asset_url(assets&.story_bg) %>
+      style="background-image: url('<%= asset_url(assets.story_bg) %>')"
+    <% end %>
+  >
+    <div class="invitation-story__intro-inner">
+      <div class="invitation-story__col invitation-story__col--spacer" aria-hidden="true"></div>
+
+      <div class="invitation-story__col invitation-story__col--visual">
+        <% if asset_url(assets&.intro_photo) || asset_url(assets&.story_graphic) %>
+          <div class="invitation-story__visual">
+            <% if asset_url(assets&.intro_photo) %>
+              <div class="invitation-story__photo">
+                <img src="<%= asset_url(assets.intro_photo) %>" alt="Elena y Armando">
+              </div>
+            <% end %>
+
+            <% if asset_url(assets&.story_graphic) %>
+              <img
+                src="<%= asset_url(assets.story_graphic) %>"
+                alt=""
+                class="invitation-story__graphic"
+                role="presentation"
+              >
+            <% elsif story_content&.title %>
+              <h2 class="invitation-story__title"><%= story_content.title %></h2>
+            <% end %>
+          </div>
+        <% elsif story_content&.title %>
+          <h2 class="invitation-story__title"><%= story_content.title %></h2>
+        <% end %>
+      </div>
+
+      <div class="invitation-story__col invitation-story__col--copy">
+        <div class="invitation-story__copy">
+          <% if story_content&.text %>
+            <p class="invitation-story__text"><%= story_content.text %></p>
+          <% end %>
+          <% if story_content&.text_secondary %>
+            <p class="invitation-story__text"><%= story_content.text_secondary %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="invitation-story__countdown invitation-story__panel"
+    <% if asset_url(assets&.hands_bg) %>
+      style="background-image: url('<%= asset_url(assets.hands_bg) %>')"
+    <% end %>
+  >
+    <div class="invitation-story__countdown-overlay" aria-hidden="true"></div>
+    <div class="invitation-story__countdown-inner">
+      <div class="invitation-story__date-block">
+        <% story_date_lines.each do |line| %>
+          <p class="invitation-story__date-line"><%= line %></p>
+        <% end %>
+        <p class="invitation-story__save"><%= story_content&.save_label || "Save the Date" %></p>
+      </div>
+
+      <div class="invitation-story__timer-block" aria-live="polite">
+        <p class="invitation-story__timer-label"><%= story_content&.countdown_label || "Estamos solo a" %></p>
+        <p class="invitation-story__timer-value">
+          <span data-countdown-days>--</span> DÍAS
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+.invitation-location__message {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.invitation-location__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}

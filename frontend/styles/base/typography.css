@@ -1,0 +1,79 @@
+body.invitation {
+  font-family: var(--font-body);
+  font-size: var(--body-size);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.invitation-hero__venue {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.invitation-hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--hero-title-size);
+  font-weight: var(--hero-title-weight);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.invitation-hero__message {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+.invitation-hero__date {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  letter-spacing: var(--letter-spacing-heading);
+  margin-top: 1.5rem;
+}
+
+.invitation-hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  color: var(--color-accent);
+}
+
+.invitation-intro__text {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+.invitation-parents__message {
+  font-family: var(--font-heading);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.invitation-parents__list li {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.invitation-guest {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.invitation-guest strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 0.5rem;
+}

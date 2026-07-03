@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <% invitation = data.invitation || site.data.dig(:invitations, data.slug) %>
+    <title><%= invitation.title %> | Live Lulas</title>
+    <meta name="description" content="Invitación digital de <%= invitation.title %>" />
+    <% if invitation.theme.font_urls.google %>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="<%= invitation.theme.font_urls.google %>">
+    <% end %>
+    <link rel="stylesheet" href="<%= asset_path :css %>" />
+    <style>
+      .theme-<%= data.slug %> {
+        --color-bg: <%= invitation.theme.colors.bg %>;
+        --color-bg-alt: <%= invitation.theme.colors.bg_alt %>;
+        --color-bg-dark: <%= invitation.theme.colors.bg_dark %>;
+        --color-bg-warm: <%= invitation.theme.colors.bg_warm %>;
+        --color-accent: <%= invitation.theme.colors.accent %>;
+        --color-text: <%= invitation.theme.colors.text %>;
+        --color-text-muted: <%= invitation.theme.colors.text_muted %>;
+        --color-text-light: <%= invitation.theme.colors.text_light %>;
+        --color-grid-line: <%= invitation.theme.colors.grid_line %>;
+        --font-heading: "<%= invitation.theme.fonts.heading %>", serif;
+        --font-body: "<%= invitation.theme.fonts.body %>", serif;
+        --font-accent: "<%= invitation.theme.fonts.accent %>", serif;
+        <% if invitation.theme.fonts.script %>
+        --font-script: "<%= invitation.theme.fonts.script %>", cursive;
+        <% end %>
+        --hero-title-size: <%= invitation.theme.typography.hero_title_size %>;
+        --hero-title-weight: <%= invitation.theme.typography.hero_title_weight %>;
+        --section-title-size: <%= invitation.theme.typography.section_title_size %>;
+        --body-size: <%= invitation.theme.typography.body_size %>;
+        --letter-spacing-heading: <%= invitation.theme.typography.letter_spacing_heading %>;
+      }
+    </style>
+    <script src="<%= asset_path :js %>" defer></script>
+    <%= live_reload_dev_js %>
+  </head>
+  <body class="invitation theme-<%= data.slug %>">
+    <main class="invitation-page">
+      <% if invitation %>
+        <%= render Invitation::Page.new(invitation: invitation, slug: data.slug) %>
+      <% else %>
+        <p>Invitación no encontrada.</p>
+      <% end %>
+    </main>
+  </body>
+</html>

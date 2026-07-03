@@ -1,0 +1,15 @@
+<section class="invitation-section <%= css_class %> invitation-section--dark invitation-gift" style="<%= section_style_attr %>">
+  <div class="invitation-section__content invitation-gift__layout">
+    <div class="invitation-gift__copy">
+      <h2 class="invitation-section__title invitation-section__title--light">Sugerencia de regalo</h2>
+      <p class="invitation-gift__message"><%= content_data&.message %></p>
+    </div>
+    <% if content_data&.transfer %>
+      <div class="invitation-gift__transfer">
+        <p class="invitation-gift__transfer-label">Transferencias</p>
+        <p><strong><%= content_data.transfer.name %></strong></p>
+        <p class="invitation-gift__account"><%= content_data.transfer.account %></p>
+      </div>
+    <% end %>
+  </div>
+</section>

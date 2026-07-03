@@ -1,0 +1,32 @@
+.invitation-details__grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.invitation-details__grid h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.invitation-details__rsvp {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+.invitation-details__rsvp strong {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .invitation-details__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,9 @@
+<section class="invitation-section <%= css_class %> invitation-section--gallery" style="<%= section_style_attr %>">
+  <div class="invitation-section__content invitation-gallery__grid">
+    <% Array(assets&.gallery).each do |image| %>
+      <figure class="invitation-gallery__item">
+        <img src="<%= asset_url(image) %>" alt="Elena y Armando" loading="lazy">
+      </figure>
+    <% end %>
+  </div>
+</section>

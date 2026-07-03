@@ -1,0 +1,31 @@
+<section class="invitation-section <%= css_class %>" style="<%= section_style_attr %>">
+  <% if section_bg_image %>
+    <img src="<%= relative_url section_bg_image %>" alt="" class="invitation-section__bg" role="presentation">
+  <% end %>
+  <div class="invitation-section__content">
+    <h2 class="invitation-section__title">Hospedaje</h2>
+    <% if content_data&.image %>
+      <img
+        class="invitation-lodging__image"
+        src="<%= relative_url content_data.image %>"
+        alt="<%= content_data.title %>"
+        loading="lazy"
+      >
+    <% end %>
+    <p class="invitation-lodging__hotel"><%= content_data&.title %></p>
+    <% if content_data&.phone %>
+      <p class="invitation-lodging__phone">Tel. <%= content_data.phone %></p>
+    <% end %>
+    <% Array(content_data&.blocks).each do |block| %>
+      <div class="invitation-lodging__block">
+        <h3>Clave <%= block.code %> · <%= block.name %></h3>
+        <% if block.note %><p class="invitation-lodging__note"><%= block.note %></p><% end %>
+        <ul>
+          <% Array(block.rates).each do |rate| %>
+            <li><strong><%= rate.label %>:</strong> <%= rate.prices %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</section>

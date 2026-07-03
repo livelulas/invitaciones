@@ -1,0 +1,78 @@
+:root {
+  --section-padding-y: 3rem;
+  --section-padding-x: 1.25rem;
+  --section-max-width: 42rem;
+  --button-radius: 999px;
+}
+
+.invitation-page {
+  width: 100%;
+  max-width: none;
+  overflow-x: hidden;
+}
+
+.invitation-section--fullbleed {
+  width: 100%;
+  max-width: none;
+}
+
+.invitation-section {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--section-bg, var(--color-bg));
+  color: var(--section-text, var(--color-text));
+}
+
+.invitation-section__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.invitation-section__content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--section-max-width));
+  margin: 0 auto;
+  padding: var(--section-padding-y) var(--section-padding-x);
+  text-align: center;
+}
+
+.invitation-section__title {
+  font-family: var(--font-heading);
+  font-size: var(--section-title-size);
+  letter-spacing: var(--letter-spacing-heading);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.invitation-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--button-radius);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.invitation-button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+}
+
+.invitation-button--disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.invitation-button--ghost,
+.invitation-button--light {
+  background: transparent;
+}

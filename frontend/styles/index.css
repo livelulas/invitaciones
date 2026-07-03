@@ -1,0 +1,43 @@
+@import "./base/reset.css";
+@import "./base/tokens.css";
+@import "./base/typography.css";
+@import "./components/countdown.css";
+@import "./components/schedule.css";
+@import "./components/location.css";
+@import "./components/lodging.css";
+@import "./components/details.css";
+@import "./components/gift.css";
+@import "./components/gallery.css";
+@import "./components/story.css";
+@import "./themes/elena-armando.css";
+
+/* Default site styles (non-invitation pages) */
+:root {
+  --body-background: #f2f2f2;
+  --body-color: #444;
+  --heading-color: black;
+  --action-color: #8b7355;
+}
+
+body:not(.invitation) {
+  background: var(--body-background);
+  color: var(--body-color);
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, sans-serif;
+  margin: 0 8px;
+  font-size: 108%;
+  line-height: 1.5;
+}
+
+body:not(.invitation) a {
+  color: var(--action-color);
+}
+
+body:not(.invitation) main {
+  margin: 2rem auto 4rem;
+  max-width: 65rem;
+  min-height: calc(100vh - 200px);
+  padding: 25px;
+  background: white;
+  box-shadow: 2px 3px 3px #ddd;
+  border-radius: 3px;
+}

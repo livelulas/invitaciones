@@ -1,0 +1,9 @@
+<% enabled_sections.each do |section_key, section_config| %>
+  <% component_class = Invitation::Page::SECTION_COMPONENTS[section_key] %>
+  <% next unless component_class %>
+  <%= render component_class.new(
+    invitation: @invitation,
+    section_config: section_config,
+    section_key: section_key
+  ) %>
+<% end %>

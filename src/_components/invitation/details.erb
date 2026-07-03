@@ -1,0 +1,37 @@
+<section class="invitation-section <%= css_class %> invitation-section--paper" style="<%= section_style_attr %>">
+  <div class="invitation-section__content invitation-details" id="details">
+    <div class="invitation-details__layout">
+    <div class="invitation-details__card">
+      <h2 class="invitation-section__title">Detalles</h2>
+      <div class="invitation-details__grid">
+        <div>
+          <h3>Vestimenta</h3>
+          <p><%= content_data&.dress_code_women %></p>
+          <p><%= content_data&.dress_code_men %></p>
+        </div>
+        <% if content_data&.children == false %>
+          <div>
+            <h3>No niños</h3>
+          </div>
+        <% end %>
+      </div>
+      <p class="invitation-details__rsvp">
+        <%= content_data&.rsvp_message %>
+        <strong><%= formatted_rsvp_deadline %></strong>
+      </p>
+    </div>
+    <div class="invitation-details__guest-block">
+      <% if content_data&.closing_title %>
+        <h2 class="invitation-details__closing"><%= content_data.closing_title %></h2>
+      <% end %>
+      <%= render Invitation::GuestName.new(
+        invitation: invitation,
+        label: content_data&.guest_label
+      ) %>
+      <% if asset_url(assets&.flourish) %>
+        <img class="invitation-details__flourish" src="<%= asset_url(assets.flourish) %>" alt="" role="presentation">
+      <% end %>
+    </div>
+    </div>
+  </div>
+</section>

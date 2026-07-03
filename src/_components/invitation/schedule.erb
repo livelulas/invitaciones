@@ -1,0 +1,26 @@
+<section class="invitation-section <%= css_class %> invitation-section--paper" style="<%= section_style_attr %>">
+  <div class="invitation-section__content">
+    <h2 class="invitation-section__title invitation-section__title--script">El Itinerario</h2>
+    <div class="invitation-schedule__list">
+      <% Array(content_data).each do |item| %>
+        <article class="invitation-schedule__item">
+          <% icon = schedule_icon_for(item) %>
+          <% if icon %>
+            <img class="invitation-schedule__icon" src="<%= asset_url(icon) %>" alt="">
+          <% end %>
+          <h3><%= item.title %></h3>
+          <p class="invitation-schedule__time">Hora: <%= item.time %></p>
+          <p class="invitation-schedule__place">Lugar: <%= item.place %></p>
+          <% if item.address && !item.address.to_s.empty? %>
+            <p class="invitation-schedule__address"><%= item.address %></p>
+          <% end %>
+          <% if item.map_url && !item.map_url.to_s.empty? %>
+            <a class="invitation-button" href="<%= item.map_url %>" target="_blank" rel="noopener">Ubicación</a>
+          <% else %>
+            <span class="invitation-button invitation-button--ghost">Ubicación</span>
+          <% end %>
+        </article>
+      <% end %>
+    </div>
+  </div>
+</section>

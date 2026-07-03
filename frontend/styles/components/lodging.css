@@ -1,0 +1,41 @@
+.invitation-lodging__image {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.invitation-lodging__hotel {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
+.invitation-lodging__phone {
+  font-family: var(--font-body);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.invitation-lodging__block {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
+  border-radius: 0.5rem;
+}
+
+.invitation-lodging__block h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-accent);
+}
+
+.invitation-lodging__note {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.invitation-lodging__block li {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}

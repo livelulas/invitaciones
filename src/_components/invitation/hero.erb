@@ -1,0 +1,52 @@
+<section class="invitation-section <%= css_class %> invitation-section--fullbleed invitation-hero--screen" style="<%= section_style_attr %>">
+  <% if section_bg_image %>
+    <img src="<%= asset_url(section_bg_image) %>" alt="" class="invitation-section__bg" role="presentation">
+  <% end %>
+
+  <div class="invitation-hero__grid">
+    <header class="invitation-hero__top">
+      <div class="invitation-hero__top-col invitation-hero__top-col--logo">
+        <% if asset_url(assets&.logo) %>
+          <img src="<%= asset_url(assets.logo) %>" alt="Elena & Armando" class="invitation-hero__logo">
+        <% end %>
+      </div>
+      <div class="invitation-hero__top-col invitation-hero__top-col--venue">
+        <% if content_data&.venue %>
+          <p class="invitation-hero__venue"><%= content_data.venue %></p>
+        <% end %>
+      </div>
+    </header>
+
+    <div class="invitation-hero__main">
+      <div class="invitation-hero__main-inner">
+        <h1 class="invitation-hero__title">
+          <% if Array(content_data&.name_lines).any? %>
+            <% Array(content_data.name_lines).each do |line| %>
+              <span class="invitation-hero__title-line"><%= line %></span>
+            <% end %>
+          <% else %>
+            <%= invitation.title %>
+          <% end %>
+        </h1>
+      </div>
+    </div>
+
+    <% if content_data&.tagline || content_data&.cta_label || formatted_hero_date %>
+      <footer class="invitation-hero__bottom">
+        <% if content_data&.tagline %>
+          <p class="invitation-hero__tagline"><%= content_data.tagline %></p>
+        <% end %>
+
+        <% if content_data&.cta_label %>
+          <a class="invitation-hero__cta" href="<%= content_data.cta_url || '#details' %>">
+            <%= content_data.cta_label %>
+          </a>
+        <% end %>
+
+        <% if formatted_hero_date %>
+          <p class="invitation-hero__date"><%= formatted_hero_date %></p>
+        <% end %>
+      </footer>
+    <% end %>
+  </div>
+</section>

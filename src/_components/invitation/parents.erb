@@ -1,0 +1,22 @@
+<section class="invitation-section <%= css_class %> invitation-section--paper" style="<%= section_style_attr %>">
+  <div class="invitation-section__content invitation-parents__layout">
+    <div class="invitation-parents__note">
+      <% if asset_url(assets&.parents_note) %>
+        <img src="<%= asset_url(assets.parents_note) %>" alt="" class="invitation-parents__note-bg" role="presentation">
+      <% end %>
+      <div class="invitation-parents__note-content">
+        <p class="invitation-parents__message"><%= content_data&.message %></p>
+        <ul class="invitation-parents__list">
+          <% Array(content_data&.names).each do |name| %>
+            <li><%= name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <% if asset_url(assets&.parents_photo) %>
+      <div class="invitation-parents__photo">
+        <img src="<%= asset_url(assets.parents_photo) %>" alt="Elena y Armando">
+      </div>
+    <% end %>
+  </div>
+</section>

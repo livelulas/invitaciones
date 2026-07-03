@@ -1,0 +1,19 @@
+.invitation-gift__message {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.invitation-gift__transfer {
+  padding: 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 30%, transparent);
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--color-bg-alt) 60%, white);
+}
+
+.invitation-gift__account {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  word-break: break-all;
+}
