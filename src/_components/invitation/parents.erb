@@ -1,22 +1,35 @@
-<section class="invitation-section <%= css_class %> invitation-section--paper" style="<%= section_style_attr %>">
-  <div class="invitation-section__content invitation-parents__layout">
-    <div class="invitation-parents__note">
-      <% if asset_url(assets&.parents_note) %>
-        <img src="<%= asset_url(assets.parents_note) %>" alt="" class="invitation-parents__note-bg" role="presentation">
-      <% end %>
-      <div class="invitation-parents__note-content">
-        <p class="invitation-parents__message"><%= content_data&.message %></p>
-        <ul class="invitation-parents__list">
-          <% Array(content_data&.names).each do |name| %>
-            <li><%= name %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
+<section class="invitation-section <%= css_class %> invitation-parents invitation-parents--screen" style="<%= section_style_attr %>">
+  <div class="invitation-parents__layout">
     <% if asset_url(assets&.parents_photo) %>
-      <div class="invitation-parents__photo">
-        <img src="<%= asset_url(assets.parents_photo) %>" alt="Elena y Armando">
+      <div class="invitation-parents__photo-panel">
+        <img src="<%= asset_url(assets.parents_photo) %>" alt="Elena y Armando" class="invitation-parents__photo">
       </div>
     <% end %>
+
+    <div
+      class="invitation-parents__note-panel"
+      <% if asset_url(assets&.parents_bg) %>
+        style="background-image: url('<%= asset_url(assets.parents_bg) %>')"
+      <% end %>
+    >
+      <div class="invitation-parents__note">
+        <% if asset_url(assets&.parents_note) %>
+          <img src="<%= asset_url(assets.parents_note) %>" alt="" class="invitation-parents__note-bg" role="presentation">
+        <% end %>
+        <div class="invitation-parents__note-content">
+          <% if content_data&.title %>
+            <h2 class="invitation-parents__heading"><%= content_data.title %></h2>
+          <% end %>
+          <% if content_data&.message %>
+            <p class="invitation-parents__message"><%= content_data.message %></p>
+          <% end %>
+          <ul class="invitation-parents__list">
+            <% Array(content_data&.names).each do |name| %>
+              <li><%= name %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

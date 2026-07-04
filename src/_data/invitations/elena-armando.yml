@@ -37,7 +37,8 @@ assets:
   intro_photo: "/images/invitations/elena-armando/elements/story-photo.png"
   countdown_photo: "/images/invitations/elena-armando/elements/5.svg"
   parents_note: "/images/invitations/elena-armando/elements/3.svg"
-  parents_photo: "/images/invitations/elena-armando/elements/2.svg"
+  parents_photo: "/images/invitations/elena-armando/elements/parents-photo.png"
+  parents_bg: "/images/invitations/elena-armando/elements/story-bg.png"
   gallery:
     - "/images/invitations/elena-armando/elements/6.svg"
     - "/images/invitations/elena-armando/elements/4.svg"
@@ -130,10 +131,11 @@ content:
     text: "para unir nuestros caminos y comenzar a escribir nuestra historia."
     text_secondary: "Estamos felices de compartir este gran día con ustedes."
   parents:
-    message: "Gracias por ser nuestro apoyo incondicional y por guiarnos hasta este momento con su amor."
+    title: "Con el Amor de Nuestros Padres"
+    message: "Gracias por ser nuestro ejemplo, nuestro apoyo incondicional y por guiarnos hasta este momento con su amor."
     names:
-      - "Zoveida Serrano & Armando Guerrero"
       - "Carmen Ávalos & Rafael Reyes"
+      - "Zoveida Serrano & Armando Guerrero"
   schedule:
     - title: Celebración Religiosa
       time: "4:00 PM"

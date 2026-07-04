@@ -70,10 +70,10 @@
 .invitation-story__graphic {
   position: absolute;
   top: 0;
-  left: -4rem;
+  left: 2.5rem;
   width: clamp(7rem, 14vw, 10.5rem);
   height: auto;
-  transform: rotate(-14deg) translate(-20%, -42%);
+  transform: rotate(-14deg) translate(-53%, -45%);
   transform-origin: top left;
   z-index: 2;
   pointer-events: none;
@@ -220,8 +220,8 @@
 
   .invitation-story__col--copy {
     margin-top: auto;
-    align-items: flex-end;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: 0;
   }
 
@@ -230,14 +230,15 @@
   }
 
   .invitation-story__graphic {
-    left: -2.5rem;
+    left: 2.5rem;
     width: min(8.5rem, 40vw);
-    transform: rotate(-14deg) translate(-20%, -42%);
+    transform: rotate(-14deg) translate(-53%, -45%);
   }
 
   .invitation-story__copy {
     max-width: min(100%, clamp(16rem, 88vw, 24rem));
-    text-align: left;
+    text-align: center;
+    margin-inline: auto;
   }
 
   .invitation-story__countdown-inner {
