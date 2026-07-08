@@ -36,13 +36,15 @@ assets:
   story_bg: "/images/invitations/elena-armando/elements/story-bg.png"
   intro_photo: "/images/invitations/elena-armando/elements/story-photo.png"
   countdown_photo: "/images/invitations/elena-armando/elements/5.svg"
-  parents_note: "/images/invitations/elena-armando/elements/3.svg"
+  parents_clip: "/images/invitations/elena-armando/elements/parents-clip.png"
+  parents_separator: "/images/invitations/elena-armando/elements/parents-separator.png"
   parents_photo: "/images/invitations/elena-armando/elements/parents-photo.png"
   parents_bg: "/images/invitations/elena-armando/elements/story-bg.png"
+  gallery_bg: "/images/invitations/elena-armando/elements/gallery-bg.png"
   gallery:
-    - "/images/invitations/elena-armando/elements/6.svg"
-    - "/images/invitations/elena-armando/elements/4.svg"
-    - "/images/invitations/elena-armando/elements/5.svg"
+    - "/images/invitations/elena-armando/elements/gallery-1.png"
+    - "/images/invitations/elena-armando/elements/gallery-2.png"
+    - "/images/invitations/elena-armando/elements/gallery-3.png"
   schedule_icons:
     religious: "/images/invitations/elena-armando/elements/7.svg"
     ice_breaker: "/images/invitations/elena-armando/elements/8.svg"
@@ -80,9 +82,9 @@ sections:
     text_color: null
   gallery:
     enabled: true
-    background_color: "#4a382f"
+    background_color: null
     background_image: null
-    text_color: "#ffffff"
+    text_color: null
   schedule:
     enabled: true
     background_color: null

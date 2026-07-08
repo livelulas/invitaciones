@@ -331,41 +331,56 @@
 }
 
 .theme-elena-armando .invitation-parents__note {
+  display: flex;
+  align-items: center;
+  height: 100%;
   position: relative;
-  width: min(100%, 18rem);
+  width: min(100%, 20rem);
   margin-inline: auto;
 }
 
-.theme-elena-armando .invitation-parents__note-bg {
+.theme-elena-armando .invitation-parents__card {
+  position: relative;
+  background-color: #dfd4b9;
+  transform: rotate(-5deg);
+  padding: clamp(2.25rem, 4.5vw, 3rem) clamp(1.5rem, 3vw, 2rem);
+  box-shadow: 0 0.5rem 1.25rem rgba(74, 56, 47, 0.14);
+  height: 75%;
   width: 100%;
+}
+
+.theme-elena-armando .invitation-parents__clip {
+  position: absolute;
+  top: -2.35rem;
+  left: -1.5rem;
+  width: 6.35rem;
   height: auto;
-  display: block;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .theme-elena-armando .invitation-parents__note-content {
-  position: absolute;
-  inset: 22% 10% 14%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 0.75rem;
+  gap: 3rem;
 }
 
 .theme-elena-armando .invitation-parents__heading {
-  font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
-  font-style: italic;
+  font-family: "BDScript Bold", cursive;
+  font-size: 3rem;
+  font-style: normal;
   font-weight: 400;
   color: var(--color-accent);
   margin: 0;
-  line-height: 1.3;
+  line-height: 2rem;
 }
 
 .theme-elena-armando .invitation-parents__message {
   font-family: var(--font-body);
-  font-size: clamp(0.8rem, 1.6vw, 0.95rem);
+  font-size: 1rem;
   font-style: normal;
   line-height: 1.65;
   color: var(--color-accent);
@@ -381,35 +396,72 @@
 
 .theme-elena-armando .invitation-parents__list li {
   font-family: var(--font-body);
-  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  font-size: 1rem;
   color: var(--color-accent);
   margin: 0;
   line-height: 1.5;
 }
 
-.theme-elena-armando .invitation-parents__list li + li {
-  margin-top: 0.85rem;
-  padding-top: 0.85rem;
-  border-top: 1px solid rgba(141, 85, 36, 0.35);
+.theme-elena-armando .invitation-parents__separator {
+  width: 100%;
+  margin: 0.15rem 0;
+  padding: 0;
 }
 
-.theme-elena-armando .invitation-section--gallery {
-  padding-block: 2rem;
+.theme-elena-armando .invitation-parents__separator img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.theme-elena-armando .invitation-gallery--screen {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 0;
+  overflow: hidden;
+}
+
+.theme-elena-armando .invitation-gallery__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
 .theme-elena-armando .invitation-gallery__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-  max-width: 56rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: min(100%, 72rem);
+  max-width: none;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(2rem, 6vw, 4rem);
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.theme-elena-armando .invitation-gallery__item {
+  flex: 0 1 auto;
+  margin: 0;
 }
 
 .theme-elena-armando .invitation-gallery__item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: clamp(10.56rem, 26.4vw, 17.82rem);
+  height: auto;
   aspect-ratio: 3 / 4;
-  border: 0.35rem solid rgba(255, 255, 255, 0.85);
+  object-fit: cover;
+  display: block;
+  border: none;
+  box-shadow: none;
 }
 
 .theme-elena-armando .invitation-section__title--script {
@@ -554,6 +606,11 @@
   .theme-elena-armando .invitation-schedule__list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .theme-elena-armando .invitation-parents__card {
+    height: 60%;
+    max-height: 60%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -572,7 +629,15 @@
   }
 
   .theme-elena-armando .invitation-gallery__grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1.25rem, 4vw, 2rem);
+  }
+
+  .theme-elena-armando .invitation-gallery__item img {
+    width: min(100%, clamp(15.84rem, 92.4vw, 23.76rem));
+    margin-inline: auto;
   }
 
   .theme-elena-armando .invitation-location__polaroids {

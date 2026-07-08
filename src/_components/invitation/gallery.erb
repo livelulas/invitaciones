@@ -1,5 +1,14 @@
-<section class="invitation-section <%= css_class %> invitation-section--gallery" style="<%= section_style_attr %>">
-  <div class="invitation-section__content invitation-gallery__grid">
+<section class="invitation-section <%= css_class %> invitation-gallery invitation-gallery--screen" style="<%= section_style_attr %>">
+  <% if asset_url(assets&.gallery_bg) %>
+    <div
+      class="invitation-gallery__bg"
+      style="background-image: url('<%= asset_url(assets.gallery_bg) %>')"
+      role="presentation"
+      aria-hidden="true"
+    ></div>
+  <% end %>
+
+  <div class="invitation-gallery__grid">
     <% Array(assets&.gallery).each do |image| %>
       <figure class="invitation-gallery__item">
         <img src="<%= asset_url(image) %>" alt="Elena y Armando" loading="lazy">

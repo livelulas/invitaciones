@@ -13,21 +13,38 @@
       <% end %>
     >
       <div class="invitation-parents__note">
-        <% if asset_url(assets&.parents_note) %>
-          <img src="<%= asset_url(assets.parents_note) %>" alt="" class="invitation-parents__note-bg" role="presentation">
-        <% end %>
-        <div class="invitation-parents__note-content">
-          <% if content_data&.title %>
-            <h2 class="invitation-parents__heading"><%= content_data.title %></h2>
+        <div class="invitation-parents__card">
+          <% if asset_url(assets&.parents_clip) %>
+            <img
+              src="<%= asset_url(assets.parents_clip) %>"
+              alt=""
+              class="invitation-parents__clip"
+              role="presentation"
+            >
           <% end %>
-          <% if content_data&.message %>
-            <p class="invitation-parents__message"><%= content_data.message %></p>
-          <% end %>
-          <ul class="invitation-parents__list">
-            <% Array(content_data&.names).each do |name| %>
-              <li><%= name %></li>
+
+          <div class="invitation-parents__note-content">
+            <% if content_data&.title %>
+              <h2 class="invitation-parents__heading"><%= content_data.title %></h2>
             <% end %>
-          </ul>
+            <% if content_data&.message %>
+              <p class="invitation-parents__message"><%= content_data.message %></p>
+            <% end %>
+
+            <% names = Array(content_data&.names) %>
+            <% if names.any? %>
+              <ul class="invitation-parents__list">
+                <% names.each_with_index do |name, index| %>
+                  <% if index.positive? && asset_url(assets&.parents_separator) %>
+                    <li class="invitation-parents__separator" aria-hidden="true">
+                      <img src="<%= asset_url(assets.parents_separator) %>" alt="" role="presentation">
+                    </li>
+                  <% end %>
+                  <li><%= name %></li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
