@@ -1,4 +1,5 @@
 require "bridgetown"
+require "fileutils"
 
 Bridgetown.load_tasks
 
@@ -11,6 +12,9 @@ task default: :deploy
 desc "Build the Bridgetown site for deployment"
 task :deploy => [:clean, "frontend:build"] do
   Bridgetown::Commands::Build.start
+  redirects_src = File.join(Dir.pwd, "src", "_redirects")
+  redirects_dest = File.join(Dir.pwd, "output", "_redirects")
+  FileUtils.cp(redirects_src, redirects_dest) if File.exist?(redirects_src)
 end
 
 desc "Build the site in a test environment"
