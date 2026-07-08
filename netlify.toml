@@ -21,12 +21,30 @@
 [build.processing.html]
   pretty_urls = true
 
+# Subdomain root -> Elena & Armando invitation (domain-level redirect)
 [[redirects]]
-  from = "/"
+  from = "https://elena-y-armando.livelulas.com/"
   to = "/elena-armando/"
-  status = 200
+  status = 301
   force = true
-  conditions = {Host = ["elena-y-armando.livelulas.com"]}
+
+[[redirects]]
+  from = "https://elena-y-armando.livelulas.com"
+  to = "/elena-armando/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://elena-y-armando.livelulas.com/"
+  to = "https://elena-y-armando.livelulas.com/elena-armando/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://elena-y-armando.livelulas.com"
+  to = "https://elena-y-armando.livelulas.com/elena-armando/"
+  status = 301
+  force = true
 
 [[headers]]
   for = "*"
