@@ -1,15 +1,28 @@
-<section class="invitation-section <%= css_class %> invitation-section--dark invitation-gift" style="<%= section_style_attr %>">
-  <div class="invitation-section__content invitation-gift__layout">
-    <div class="invitation-gift__copy">
-      <h2 class="invitation-section__title invitation-section__title--light">Sugerencia de regalo</h2>
-      <p class="invitation-gift__message"><%= content_data&.message %></p>
-    </div>
-    <% if content_data&.transfer %>
-      <div class="invitation-gift__transfer">
-        <p class="invitation-gift__transfer-label">Transferencias</p>
-        <p><strong><%= content_data.transfer.name %></strong></p>
-        <p class="invitation-gift__account"><%= content_data.transfer.account %></p>
-      </div>
+<section class="invitation-section <%= css_class %> invitation-gift invitation-gift--half" style="<%= section_style_attr %>">
+  <% if asset_url(assets&.gift_bg) %>
+    <div
+      class="invitation-gift__bg"
+      style="background-image: url('<%= asset_url(assets.gift_bg) %>')"
+      role="presentation"
+      aria-hidden="true"
+    ></div>
+  <% end %>
+
+  <div class="invitation-gift__content">
+    <% if asset_url(assets&.logo) %>
+      <img
+        src="<%= asset_url(assets.logo) %>"
+        alt="Elena & Armando"
+        class="invitation-gift__logo"
+      >
+    <% end %>
+
+    <% if content_data&.message %>
+      <p class="invitation-gift__message"><%= content_data.message %></p>
+    <% end %>
+
+    <% if content_data&.message_secondary %>
+      <p class="invitation-gift__message invitation-gift__message--bold"><%= content_data.message_secondary %></p>
     <% end %>
   </div>
 </section>

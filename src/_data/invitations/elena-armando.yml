@@ -54,6 +54,9 @@ assets:
   travel_polaroids:
     - "/images/invitations/elena-armando/elements/location-polaroid-1.png"
     - "/images/invitations/elena-armando/elements/location-polaroid-2.png"
+  details_bee: "/images/invitations/elena-armando/elements/details-bee.svg"
+  details_transfer_icon: "/images/invitations/elena-armando/elements/details-transfer-icon.png"
+  gift_bg: "/images/invitations/elena-armando/elements/gift-bg.png"
 
 sections:
   hero:
@@ -97,7 +100,7 @@ sections:
     background_image: null
     text_color: "#ffffff"
   lodging:
-    enabled: true
+    enabled: false
     background_color: "#ffffff"
     background_image: null
     text_color: null
@@ -108,7 +111,7 @@ sections:
     text_color: null
   gift:
     enabled: true
-    background_color: "#4a382f"
+    background_color: null
     background_image: null
     text_color: "#ffffff"
 
@@ -168,7 +171,7 @@ content:
     title: "Hotel Sede"
     message: "A todos los que viajan y cruzan distancias para acompañarnos: gracias de corazón por estar con nosotros en el día más importante."
     details_label: "Detalles"
-    details_url: "#lodging"
+    details_url: "#details"
     map_label: "Ubicación"
     map_url: ""
   lodging:
@@ -199,12 +202,15 @@ content:
   details:
     guest_label: "Esta invitación es para"
     closing_title: "Los esperamos"
-    dress_code_women: Vestido largo
-    dress_code_men: Traje completo
+    dress_code_intro: "Queremos verlos brillar en nuestra celebración."
+    dress_code_women: "Vestido largo formal"
+    dress_code_men: "Traje completo"
+    dress_code_note: "Se solicita evitar vestidos en color blanco o tonos claros."
     children: false
     rsvp_message: "Favor de confirmar su asistencia antes del"
-  gift:
-    message: "Su presencia es nuestro mayor regalo. Si desean tener un detalle con nosotros para ayudarnos a construir nuestro nuevo hogar:"
     transfer:
       name: ELENA REYES AVALOS
       account: "002180000011112222"
+  gift:
+    message: "Hagamos que esta noche sea inolvidable."
+    message_secondary: "Gracias por formar parte de nuestra historia"

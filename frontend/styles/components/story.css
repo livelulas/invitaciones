@@ -21,9 +21,9 @@
   align-items: center;
   justify-content: center;
   background-color: var(--color-bg);
-  background-size: 100% auto;
-  background-position: top center;
-  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .invitation-story__intro-inner {

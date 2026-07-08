@@ -1,37 +1,104 @@
-<section class="invitation-section <%= css_class %> invitation-section--paper" style="<%= section_style_attr %>">
-  <div class="invitation-section__content invitation-details" id="details">
-    <div class="invitation-details__layout">
-    <div class="invitation-details__card">
-      <h2 class="invitation-section__title">Detalles</h2>
-      <div class="invitation-details__grid">
-        <div>
-          <h3>Vestimenta</h3>
-          <p><%= content_data&.dress_code_women %></p>
-          <p><%= content_data&.dress_code_men %></p>
-        </div>
-        <% if content_data&.children == false %>
-          <div>
-            <h3>No niños</h3>
+<section class="invitation-section <%= css_class %> invitation-details invitation-details--screen" style="<%= section_style_attr %>" id="details">
+  <% transfer = content_data&.transfer || invitation.content&.gift&.transfer %>
+
+  <div class="invitation-details__layout">
+    <div class="invitation-details__left-panel">
+      <% if asset_url(assets&.parents_photo) %>
+        <img
+          src="<%= asset_url(assets.parents_photo) %>"
+          alt=""
+          class="invitation-details__photo"
+          role="presentation"
+        >
+      <% end %>
+
+      <div class="invitation-details__note">
+        <div class="invitation-parents__card invitation-details__card">
+          <% if asset_url(assets&.parents_clip) %>
+            <img
+              src="<%= asset_url(assets.parents_clip) %>"
+              alt=""
+              class="invitation-parents__clip"
+              role="presentation"
+            >
+          <% end %>
+
+          <div class="invitation-details__card-content">
+            <h2 class="invitation-details__heading">Detalles</h2>
+
+            <% if content_data&.children == false %>
+              <p class="invitation-details__children">Respetuosamente No niños</p>
+            <% end %>
+
+            <h3 class="invitation-details__subheading">Dress Code</h3>
+
+            <% if content_data&.dress_code_intro %>
+              <p class="invitation-details__text"><%= content_data.dress_code_intro %></p>
+            <% end %>
+
+            <% if content_data&.dress_code_women %>
+              <p class="invitation-details__dress-code"><strong><%= content_data.dress_code_women %></strong></p>
+            <% end %>
+            <% if content_data&.dress_code_men %>
+              <p class="invitation-details__dress-code"><strong><%= content_data.dress_code_men %></strong></p>
+            <% end %>
+
+            <% if content_data&.dress_code_note %>
+              <p class="invitation-details__dress-note"><%= content_data.dress_code_note %></p>
+            <% end %>
+
+            <% if transfer %>
+              <div class="invitation-details__transfer">
+                <% if asset_url(assets&.details_transfer_icon) %>
+                  <div class="invitation-details__transfer-icon">
+                    <img
+                      src="<%= asset_url(assets.details_transfer_icon) %>"
+                      alt=""
+                      class="invitation-details__transfer-graphic"
+                      role="presentation"
+                    >
+                  </div>
+                <% end %>
+                <div class="invitation-details__transfer-copy">
+                  <p class="invitation-details__transfer-label">Transferencias</p>
+                  <p class="invitation-details__transfer-name"><strong><%= transfer.name %></strong></p>
+                  <p class="invitation-details__transfer-account"><%= transfer.account %></p>
+                </div>
+              </div>
+            <% end %>
           </div>
-        <% end %>
+        </div>
       </div>
-      <p class="invitation-details__rsvp">
-        <%= content_data&.rsvp_message %>
-        <strong><%= formatted_rsvp_deadline %></strong>
-      </p>
     </div>
-    <div class="invitation-details__guest-block">
+
+    <div
+      class="invitation-details__right-panel"
+      <% if asset_url(assets&.story_bg) %>
+        style="background-image: url('<%= asset_url(assets.story_bg) %>')"
+      <% end %>
+    >
+      <% if asset_url(assets&.details_bee) %>
+        <img
+          src="<%= asset_url(assets.details_bee) %>"
+          alt=""
+          class="invitation-details__bee"
+          role="presentation"
+        >
+      <% end %>
+
       <% if content_data&.closing_title %>
         <h2 class="invitation-details__closing"><%= content_data.closing_title %></h2>
       <% end %>
+
       <%= render Invitation::GuestName.new(
         invitation: invitation,
         label: content_data&.guest_label
       ) %>
-      <% if asset_url(assets&.flourish) %>
-        <img class="invitation-details__flourish" src="<%= asset_url(assets.flourish) %>" alt="" role="presentation">
-      <% end %>
-    </div>
+
+      <p class="invitation-details__rsvp">
+        <%= content_data&.rsvp_message %>
+        <strong><%= formatted_rsvp_deadline %></strong>
+      </p>
     </div>
   </div>
 </section>
