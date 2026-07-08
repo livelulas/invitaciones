@@ -1,5 +1,5 @@
-<section class="invitation-section <%= css_class %> invitation-section--travel" style="<%= section_style_attr %>">
-  <div class="invitation-section__content invitation-location__layout">
+<section class="invitation-section <%= css_class %> invitation-location invitation-location--screen" style="<%= section_style_attr %>">
+  <div class="invitation-location__layout">
     <div class="invitation-location__polaroids">
       <% Array(assets&.travel_polaroids).each_with_index do |image, index| %>
         <img
@@ -10,25 +10,28 @@
         >
       <% end %>
     </div>
+
     <div class="invitation-location__copy">
-      <h2 class="invitation-section__title invitation-section__title--light"><%= content_data&.title || "Guía de Viajeros" %></h2>
-      <p class="invitation-location__message"><%= content_data&.message %></p>
+      <h2 class="invitation-location__title"><%= content_data&.title || "Hotel Sede" %></h2>
+      <% if content_data&.message %>
+        <p class="invitation-location__message"><%= content_data.message %></p>
+      <% end %>
       <div class="invitation-location__actions">
-        <% if content_data&.guide_url && !content_data.guide_url.to_s.empty? %>
-          <a class="invitation-button invitation-button--light" href="<%= content_data.guide_url %>" target="_blank" rel="noopener">
-            <%= content_data.guide_label || "Guía" %>
+        <% if content_data&.details_url && !content_data.details_url.to_s.empty? %>
+          <a class="invitation-button invitation-button--light" href="<%= content_data.details_url %>">
+            <%= content_data.details_label || "Detalles" %>
           </a>
         <% else %>
-          <span class="invitation-button invitation-button--light invitation-button--disabled"><%= content_data&.guide_label || "Guía MTY" %></span>
+          <span class="invitation-button invitation-button--light invitation-button--ghost"><%= content_data&.details_label || "Detalles" %></span>
         <% end %>
-        <% if content_data&.hotel_url && !content_data.hotel_url.to_s.empty? %>
-          <a class="invitation-button invitation-button--light" href="<%= content_data.hotel_url %>" target="_blank" rel="noopener">
-            <%= content_data.hotel_label || "Hotel" %>
+
+        <% if content_data&.map_url && !content_data.map_url.to_s.empty? %>
+          <a class="invitation-button invitation-button--light" href="<%= content_data.map_url %>" target="_blank" rel="noopener">
+            <%= content_data.map_label || "Ubicación" %>
           </a>
         <% else %>
-          <span class="invitation-button invitation-button--light invitation-button--disabled"><%= content_data&.hotel_label || "Hotel Sede" %></span>
+          <span class="invitation-button invitation-button--light invitation-button--ghost"><%= content_data&.map_label || "Ubicación" %></span>
         <% end %>
-        <span class="invitation-button invitation-button--light invitation-button--disabled"><%= content_data&.details_label || "Detalles" %></span>
       </div>
     </div>
   </div>

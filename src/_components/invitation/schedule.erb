@@ -1,26 +1,93 @@
-<section class="invitation-section <%= css_class %> invitation-section--paper" style="<%= section_style_attr %>">
-  <div class="invitation-section__content">
-    <h2 class="invitation-section__title invitation-section__title--script">El Itinerario</h2>
-    <div class="invitation-schedule__list">
-      <% Array(content_data).each do |item| %>
+<section class="invitation-section <%= css_class %> invitation-schedule invitation-schedule--screen" style="<%= section_style_attr %>">
+  <% schedule_items = Array(content_data) %>
+  <% items_by_key = schedule_items.each_with_object({}) do |item, hash|
+       key = (item.icon_key || item[:icon_key]).to_s
+       hash[key] = item unless key.empty?
+     end %>
+
+  <div
+    class="invitation-schedule__layout"
+    <% if asset_url(assets&.story_bg) %>
+      style="background-image: url('<%= asset_url(assets.story_bg) %>')"
+    <% end %>
+  >
+    <div class="invitation-schedule__row invitation-schedule__row--title">
+      <h2 class="invitation-schedule__title">El Itinerario</h2>
+    </div>
+
+    <% if items_by_key["religious"] %>
+      <div class="invitation-schedule__row invitation-schedule__row--single">
+        <% item = items_by_key["religious"] %>
         <article class="invitation-schedule__item">
           <% icon = schedule_icon_for(item) %>
-          <% if icon %>
-            <img class="invitation-schedule__icon" src="<%= asset_url(icon) %>" alt="">
-          <% end %>
-          <h3><%= item.title %></h3>
-          <p class="invitation-schedule__time">Hora: <%= item.time %></p>
-          <p class="invitation-schedule__place">Lugar: <%= item.place %></p>
-          <% if item.address && !item.address.to_s.empty? %>
-            <p class="invitation-schedule__address"><%= item.address %></p>
-          <% end %>
-          <% if item.map_url && !item.map_url.to_s.empty? %>
-            <a class="invitation-button" href="<%= item.map_url %>" target="_blank" rel="noopener">Ubicación</a>
-          <% else %>
-            <span class="invitation-button invitation-button--ghost">Ubicación</span>
-          <% end %>
+          <div class="invitation-schedule__item-head">
+            <% if icon %>
+              <img class="invitation-schedule__icon" src="<%= asset_url(icon) %>" alt="" role="presentation">
+            <% end %>
+            <h3 class="invitation-schedule__item-title"><%= item.title %></h3>
+          </div>
+          <p class="invitation-schedule__time"><strong>Hora:</strong> <%= item.time %></p>
+          <p class="invitation-schedule__place"><strong>Lugar:</strong> <%= item.place %></p>
+          <div class="invitation-schedule__action">
+            <% if item.map_url && !item.map_url.to_s.empty? %>
+              <a class="invitation-button invitation-button--ghost" href="<%= item.map_url %>" target="_blank" rel="noopener">Ubicación</a>
+            <% else %>
+              <span class="invitation-button invitation-button--ghost">Ubicación</span>
+            <% end %>
+          </div>
         </article>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
+
+    <% if items_by_key["civil"] || items_by_key["ice_breaker"] %>
+      <div class="invitation-schedule__row invitation-schedule__row--pair">
+        <% ["civil", "ice_breaker"].each do |key| %>
+          <% item = items_by_key[key] %>
+          <% next unless item %>
+          <article class="invitation-schedule__item">
+            <% icon = schedule_icon_for(item) %>
+            <div class="invitation-schedule__item-head">
+              <% if icon %>
+                <img class="invitation-schedule__icon" src="<%= asset_url(icon) %>" alt="" role="presentation">
+              <% end %>
+              <h3 class="invitation-schedule__item-title"><%= item.title %></h3>
+            </div>
+            <p class="invitation-schedule__time"><strong>Hora:</strong> <%= item.time %></p>
+            <p class="invitation-schedule__place"><strong>Lugar:</strong> <%= item.place %></p>
+            <div class="invitation-schedule__action">
+              <% if item.map_url && !item.map_url.to_s.empty? %>
+                <a class="invitation-button invitation-button--ghost" href="<%= item.map_url %>" target="_blank" rel="noopener">Ubicación</a>
+              <% else %>
+                <span class="invitation-button invitation-button--ghost">Ubicación</span>
+              <% end %>
+            </div>
+          </article>
+        <% end %>
+      </div>
+    <% end %>
+
+    <% if items_by_key["reception"] %>
+      <div class="invitation-schedule__row invitation-schedule__row--single">
+        <% item = items_by_key["reception"] %>
+        <article class="invitation-schedule__item">
+          <% icon = schedule_icon_for(item) %>
+          <div class="invitation-schedule__item-head">
+            <% if icon %>
+              <img class="invitation-schedule__icon" src="<%= asset_url(icon) %>" alt="" role="presentation">
+            <% end %>
+            <h3 class="invitation-schedule__item-title"><%= item.title %></h3>
+          </div>
+          <p class="invitation-schedule__time"><strong>Hora:</strong> <%= item.time %></p>
+          <p class="invitation-schedule__place"><strong>Lugar:</strong> <%= item.place %></p>
+          <div class="invitation-schedule__action">
+            <% if item.map_url && !item.map_url.to_s.empty? %>
+              <a class="invitation-button invitation-button--ghost" href="<%= item.map_url %>" target="_blank" rel="noopener">Ubicación</a>
+            <% else %>
+              <span class="invitation-button invitation-button--ghost">Ubicación</span>
+            <% end %>
+          </div>
+        </article>
+      </div>
+    <% end %>
   </div>
 </section>

@@ -46,13 +46,14 @@ assets:
     - "/images/invitations/elena-armando/elements/gallery-2.png"
     - "/images/invitations/elena-armando/elements/gallery-3.png"
   schedule_icons:
-    religious: "/images/invitations/elena-armando/elements/7.svg"
-    ice_breaker: "/images/invitations/elena-armando/elements/8.svg"
-    reception: "/images/invitations/elena-armando/elements/9.svg"
+    religious: "/images/invitations/elena-armando/elements/schedule-religious.svg"
+    civil: "/images/invitations/elena-armando/elements/schedule-civil.svg"
+    ice_breaker: "/images/invitations/elena-armando/elements/schedule-ice-breaker.svg"
+    reception: "/images/invitations/elena-armando/elements/schedule-reception.svg"
   hands_bg: "/images/invitations/elena-armando/elements/hands-bg.png"
   travel_polaroids:
-    - "/images/invitations/elena-armando/elements/10.svg"
-    - "/images/invitations/elena-armando/elements/11.svg"
+    - "/images/invitations/elena-armando/elements/location-polaroid-1.png"
+    - "/images/invitations/elena-armando/elements/location-polaroid-2.png"
 
 sections:
   hero:
@@ -92,7 +93,7 @@ sections:
     text_color: null
   location:
     enabled: true
-    background_color: "#6b5345"
+    background_color: "#9f6e40"
     background_image: null
     text_color: "#ffffff"
   lodging:
@@ -141,30 +142,35 @@ content:
   schedule:
     - title: Celebración Religiosa
       time: "4:00 PM"
-      place: Parroquia del Rosario
+      place: Parroquia del Rosario, Col. Roma
       address: ""
-      map_url: ""
+      map_url: "https://maps.app.goo.gl/q3FRED1YYp8hg47e8"
       icon_key: religious
+    - title: Civil
+      time: "7:15 PM"
+      place: Hacienda M
+      address: ""
+      map_url: "https://maps.app.goo.gl/Wb6VSBdNpuZ2UZT38"
+      icon_key: civil
     - title: Ice Breaker
       time: "7:30 PM"
       place: Hacienda M
       address: ""
-      map_url: ""
+      map_url: "https://maps.app.goo.gl/Wb6VSBdNpuZ2UZT38"
       icon_key: ice_breaker
     - title: Recepción
-      time: "8:30 PM"
+      time: "8:00 PM"
       place: Hacienda M
       address: ""
-      map_url: ""
+      map_url: "https://maps.app.goo.gl/Wb6VSBdNpuZ2UZT38"
       icon_key: reception
   location:
-    title: "Guía de Viajeros"
+    title: "Hotel Sede"
     message: "A todos los que viajan y cruzan distancias para acompañarnos: gracias de corazón por estar con nosotros en el día más importante."
-    guide_label: "Guía MTY"
-    guide_url: ""
-    hotel_label: "Hotel Sede"
-    hotel_url: ""
     details_label: "Detalles"
+    details_url: "#lodging"
+    map_label: "Ubicación"
+    map_url: ""
   lodging:
     title: "Hotel Crowne Plaza"
     phone: "800 839 9300"
