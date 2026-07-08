@@ -40,12 +40,13 @@ body.home .home-main {
 
 .site-header__logo {
   display: inline-flex;
-  width: min(4.5rem, 18vw);
+  width: min(5.5rem, 22vw);
 }
 
 .site-header__logo img {
   width: 100%;
   height: auto;
+  border-radius: 0.2rem;
 }
 
 .home-hero {
@@ -199,7 +200,7 @@ body.home .home-main {
 }
 
 .site-footer__logo {
-  width: min(4rem, 16vw);
+  width: min(5rem, 20vw);
   opacity: 0.95;
 }
 
