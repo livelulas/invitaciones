@@ -1,12 +1,4 @@
 ---
-layout: default
-title: Live Lulas Invitations
+layout: home
+title: Livelulas
 ---
-
-# Live Lulas Invitations
-
-Kit base para invitaciones digitales.
-
-## Invitaciones
-
-- [Elena & Armando](/elena-armando/)

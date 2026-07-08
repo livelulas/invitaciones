@@ -1,3 +1,22 @@
-<footer>
-  Contact me at <a href="mailto:<%= metadata.email %>"><%= metadata.email %></a>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <img src="<%= relative_url '/images/logo.png' %>" alt="Livelulas" class="site-footer__logo" />
+    </div>
+
+    <div class="site-footer__contact">
+      <h2 class="site-footer__heading">Contacto</h2>
+      <% if metadata.email %>
+        <p><a href="mailto:<%= metadata.email %>"><%= metadata.email %></a></p>
+      <% end %>
+      <% if metadata.phone %>
+        <p><a href="tel:<%= metadata.phone.gsub(/\s+/, '') %>"><%= metadata.phone %></a></p>
+      <% end %>
+      <p>
+        <a href="https://livelulas.com/" target="_blank" rel="noopener">livelulas.com</a>
+      </p>
+    </div>
+
+    <p class="site-footer__copy">© <%= Time.now.year %> Livelulas. Todos los derechos reservados.</p>
+  </div>
 </footer>

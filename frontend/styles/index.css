@@ -11,15 +11,15 @@
 @import "./components/story.css";
 @import "./themes/elena-armando.css";
 
-/* Default site styles (non-invitation pages) */
+/* Default site styles (non-invitation, non-home pages) */
 :root {
-  --body-background: #f2f2f2;
-  --body-color: #444;
-  --heading-color: black;
-  --action-color: #8b7355;
+  --body-background: #f7f6f2;
+  --body-color: #1e2826;
+  --heading-color: #1e2826;
+  --action-color: #3a6d62;
 }
 
-body:not(.invitation) {
+body:not(.invitation):not(.home) {
   background: var(--body-background);
   color: var(--body-color);
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -28,11 +28,11 @@ body:not(.invitation) {
   line-height: 1.5;
 }
 
-body:not(.invitation) a {
+body:not(.invitation):not(.home) a {
   color: var(--action-color);
 }
 
-body:not(.invitation) main {
+body:not(.invitation):not(.home) main {
   margin: 2rem auto 4rem;
   max-width: 65rem;
   min-height: calc(100vh - 200px);
