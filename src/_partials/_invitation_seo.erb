@@ -2,9 +2,14 @@
 <% page_title = seo&.title || invitation.title %>
 <% page_description = seo&.description || "Invitación digital de #{invitation.title}" %>
 <% og_image_url = seo&.image ? absolute_url(seo.image) : nil %>
+<% favicon_url = invitation.assets&.logo ? absolute_url(invitation.assets.logo) : nil %>
 
 <title><%= page_title %> | Livelulas</title>
 <meta name="description" content="<%= page_description %>" />
+<% if favicon_url %>
+  <link rel="icon" href="<%= favicon_url %>" type="image/png" />
+  <link rel="apple-touch-icon" href="<%= favicon_url %>" />
+<% end %>
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="<%= page_title %>" />

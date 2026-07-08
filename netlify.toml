@@ -21,6 +21,12 @@
 [build.processing.html]
   pretty_urls = true
 
+[[redirects]]
+  from = "/"
+  to = "/elena-armando/"
+  status = 200
+  conditions = {Host = ["elena-y-armando.livelulas.com"]}
+
 [[headers]]
   for = "*"
   [headers.values]
