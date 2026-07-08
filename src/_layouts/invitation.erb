@@ -4,8 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <% invitation = data.invitation || site.data.dig(:invitations, data.slug) %>
-    <title><%= invitation.title %> | Live Lulas</title>
-    <meta name="description" content="Invitación digital de <%= invitation.title %>" />
+    <%= render "invitation_seo", invitation: invitation, resource: resource %>
     <% if invitation.theme.font_urls.google %>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -15,8 +15,8 @@
 # handles, etc., take a look at `src/_data/site_metadata.yml`
 
 Bridgetown.configure do |config|
-  # The base hostname & protocol for your site, e.g. https://example.com
-  url ""
+  # Netlify sets URL automatically during deploy for absolute Open Graph links.
+  url ENV.fetch("URL", "").to_s.chomp("/")
 
   # Available options are `erb` (default), `serbea`, or `liquid`
   template_engine "erb"

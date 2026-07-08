@@ -1,0 +1,27 @@
+<% seo = invitation.seo %>
+<% page_title = seo&.title || invitation.title %>
+<% page_description = seo&.description || "Invitación digital de #{invitation.title}" %>
+<% og_image_url = seo&.image ? absolute_url(seo.image) : nil %>
+
+<title><%= page_title %> | Livelulas</title>
+<meta name="description" content="<%= page_description %>" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="<%= page_title %>" />
+<meta property="og:description" content="<%= page_description %>" />
+<% if og_image_url %>
+  <meta property="og:image" content="<%= og_image_url %>" />
+  <meta property="og:image:alt" content="<%= page_title %>" />
+<% end %>
+<% if resource.respond_to?(:absolute_url) && !resource.absolute_url.to_s.empty? %>
+  <meta property="og:url" content="<%= resource.absolute_url %>" />
+<% end %>
+<meta property="og:site_name" content="Livelulas" />
+<meta property="og:locale" content="es_MX" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="<%= page_title %>" />
+<meta name="twitter:description" content="<%= page_description %>" />
+<% if og_image_url %>
+  <meta name="twitter:image" content="<%= og_image_url %>" />
+<% end %>

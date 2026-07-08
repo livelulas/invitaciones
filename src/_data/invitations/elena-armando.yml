@@ -4,6 +4,11 @@ event_type: wedding
 date: "2026-10-17T16:00:00-06:00"
 rsvp_deadline: "2026-09-17"
 
+seo:
+  title: "Boda Elena y Armando"
+  description: "Estamos felices de compartir este gran día con ustedes. 17 de Octubre 2026"
+  image: "/images/invitations/elena-armando/og-share.png"
+
 theme:
   fonts:
     heading: "Quattrocento"
