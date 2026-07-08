@@ -21,16 +21,18 @@
 [build.processing.html]
   pretty_urls = true
 
-# Subdomain root serves Elena & Armando invitation without changing the URL
+# Subdomain root serves Elena & Armando invitation without changing the URL.
+# Point directly to index.html to avoid Netlify canonicalizing /elena-armando/ in the browser.
+# Assets (/_bridgetown/static/, /images/) are served from site root and need no rewrite.
 [[redirects]]
   from = "https://elena-y-armando.livelulas.com/"
-  to = "/elena-armando/"
+  to = "/elena-armando/index.html"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://elena-y-armando.livelulas.com"
-  to = "/elena-armando/"
+  to = "/elena-armando/index.html"
   status = 200
   force = true
 
@@ -43,6 +45,12 @@
 [[redirects]]
   from = "http://elena-y-armando.livelulas.com"
   to = "https://elena-y-armando.livelulas.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://elena-y-armando.livelulas.com/*"
+  to = "https://elena-y-armando.livelulas.com/:splat"
   status = 301
   force = true
 
