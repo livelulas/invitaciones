@@ -25,6 +25,7 @@
   from = "/"
   to = "/elena-armando/"
   status = 200
+  force = true
   conditions = {Host = ["elena-y-armando.livelulas.com"]}
 
 [[headers]]
