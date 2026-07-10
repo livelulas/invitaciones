@@ -572,6 +572,14 @@
   gap: clamp(4rem, 18vw, 14rem);
 }
 
+.theme-elena-armando [data-schedule-item="civil"] {
+  display: none;
+}
+
+.theme-elena-armando [data-show-civil="true"] [data-schedule-item="civil"] {
+  display: block;
+}
+
 .theme-elena-armando .invitation-schedule__item {
   background: transparent;
   border: none;
