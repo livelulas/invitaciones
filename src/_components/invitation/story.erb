@@ -62,7 +62,23 @@
         <% story_date_lines.each do |line| %>
           <p class="invitation-story__date-line"><%= line %></p>
         <% end %>
-        <p class="invitation-story__save"><%= story_content&.save_label || "Save the Date" %></p>
+        <% if calendar_url %>
+          <a
+            class="invitation-story__save"
+            href="<%= calendar_url %>"
+            data-calendar-link
+            data-google-url="<%= calendar_url %>"
+            <% if calendar_webcal_url %>
+              data-webcal-url="<%= calendar_webcal_url %>"
+            <% end %>
+            target="_blank"
+            rel="noopener"
+          >
+            <%= story_content&.save_label || "Save the Date" %>
+          </a>
+        <% else %>
+          <p class="invitation-story__save"><%= story_content&.save_label || "Save the Date" %></p>
+        <% end %>
       </div>
 
       <div class="invitation-story__timer-block" aria-live="polite">

@@ -27,10 +27,10 @@
 
         <% if content_data&.map_url && !content_data.map_url.to_s.empty? %>
           <a class="invitation-button invitation-button--light" href="<%= content_data.map_url %>" target="_blank" rel="noopener">
-            <%= content_data.map_label || "Ubicación" %>
+            <%= content_data.map_label || "Ver ubicación" %>
           </a>
         <% else %>
-          <span class="invitation-button invitation-button--light invitation-button--ghost"><%= content_data&.map_label || "Ubicación" %></span>
+          <span class="invitation-button invitation-button--light invitation-button--ghost"><%= content_data&.map_label || "Ver ubicación" %></span>
         <% end %>
       </div>
     </div>

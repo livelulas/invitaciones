@@ -60,6 +60,7 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   background: transparent;
+  cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -70,6 +71,10 @@
 
 .invitation-button--disabled {
   opacity: 0.6;
+}
+
+.invitation-button--disabled,
+span.invitation-button {
   cursor: default;
 }
 

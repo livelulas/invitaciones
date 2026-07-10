@@ -96,4 +96,22 @@ class Invitation::BaseSection < Bridgetown::Component
   rescue ArgumentError
     deadline
   end
+
+  def calendar_url
+    return unless Invitation::Calendar.event_start(invitation)
+
+    custom_url = content_data&.calendar_url || content_data&.save_url
+    return custom_url if custom_url && !custom_url.to_s.empty?
+
+    calendar_google_url
+  end
+
+  def calendar_google_url
+    Invitation::Calendar.google_calendar_url(invitation)
+  end
+
+  def calendar_webcal_url
+    path = Invitation::Calendar.ics_path(invitation)
+    absolute_url(path).sub(/\Ahttps?:\/\//i, "webcal://")
+  end
 end

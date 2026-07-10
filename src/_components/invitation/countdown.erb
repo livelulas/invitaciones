@@ -6,7 +6,23 @@
   <div class="invitation-section__content invitation-countdown__layout">
     <div class="invitation-countdown__date-block">
       <p class="invitation-countdown__date"><%= formatted_date_short %></p>
-      <p class="invitation-countdown__save">Save the Date</p>
+      <% if calendar_url %>
+        <a
+          class="invitation-countdown__save"
+          href="<%= calendar_url %>"
+          data-calendar-link
+          data-google-url="<%= calendar_url %>"
+          <% if calendar_webcal_url %>
+            data-webcal-url="<%= calendar_webcal_url %>"
+          <% end %>
+          target="_blank"
+          rel="noopener"
+        >
+          <%= content_data&.save_label || "Save the Date" %>
+        </a>
+      <% else %>
+        <p class="invitation-countdown__save"><%= content_data&.save_label || "Save the Date" %></p>
+      <% end %>
     </div>
     <% if asset_url(assets&.countdown_photo) %>
       <div class="invitation-countdown__photo">

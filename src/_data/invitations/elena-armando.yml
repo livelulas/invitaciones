@@ -4,6 +4,12 @@ event_type: wedding
 date: "2026-10-17T16:00:00-06:00"
 rsvp_deadline: "2026-09-17"
 
+calendar:
+  title: "Boda Elena y Armando"
+  description: "Estamos felices de compartir este gran día con ustedes."
+  location: "Parroquia del Rosario | Hacienda M"
+  duration_hours: 8
+
 seo:
   title: "Boda Elena y Armando"
   description: "Estamos felices de compartir este gran día con ustedes. 17 de Octubre 2026"
@@ -126,7 +132,7 @@ content:
     venue: "PARROQUIA EL ROSARIO | HACIENDA M"
     tagline: "EL PRIMER PASO DE NUESTRO \"PARA SIEMPRE\""
     cta_label: "CONFIRMA AQUÍ"
-    cta_url: "#details"
+    cta_url: "https://wa.me/528134304167?text=%C2%A1Hola!%20Cuenta%20conmigo%20para%20el%20gran%20d%C3%ADa."
   story:
     text: "Bastó una feliz coincidencia para unir nuestros caminos y comenzar a escribir nuestra historia."
     text_secondary: "Estamos felices de compartir este gran día con ustedes."
@@ -174,7 +180,7 @@ content:
     message: "A todos los que viajan y cruzan distancias para acompañarnos: gracias de corazón por estar con nosotros en el día más importante."
     details_label: "Detalles"
     details_url: "#details"
-    map_label: "Ubicación"
+    map_label: "Ver ubicación"
     map_url: ""
   lodging:
     title: "Hotel Crowne Plaza"
@@ -211,8 +217,8 @@ content:
     children: false
     rsvp_message: "Favor de confirmar su asistencia antes del"
     transfer:
-      name: ELENA REYES AVALOS
-      account: "002180000011112222"
+      name: Elena Reyes Ávalos
+      account: "4152313898961854"
   gift:
     message: "Hagamos que esta noche sea inolvidable."
     message_secondary: "Gracias por formar parte de nuestra historia"
