@@ -12,7 +12,7 @@
     <% end %>
   >
     <div class="invitation-schedule__row invitation-schedule__row--title">
-      <h2 class="invitation-schedule__title">El Itinerario</h2>
+      <h2 class="invitation-schedule__title"><%= label_for(:schedule_title, "El Itinerario") %></h2>
     </div>
 
     <% if items_by_key["religious"] %>
@@ -26,13 +26,13 @@
             <% end %>
             <h3 class="invitation-schedule__item-title"><%= item.title %></h3>
           </div>
-          <p class="invitation-schedule__time"><strong>Hora:</strong> <%= item.time %></p>
-          <p class="invitation-schedule__place"><strong>Lugar:</strong> <%= item.place %></p>
+          <p class="invitation-schedule__time"><strong><%= label_for(:time_label, "Hora") %>:</strong> <%= item.time %></p>
+          <p class="invitation-schedule__place"><strong><%= label_for(:place_label, "Lugar") %>:</strong> <%= item.place %></p>
           <div class="invitation-schedule__action">
             <% if item.map_url && !item.map_url.to_s.empty? %>
-              <a class="invitation-button invitation-button--ghost" href="<%= item.map_url %>" target="_blank" rel="noopener">Ver ubicación</a>
+              <a class="invitation-button invitation-button--ghost" href="<%= item.map_url %>" target="_blank" rel="noopener"><%= label_for(:map_label, "Ver ubicación") %></a>
             <% else %>
-              <span class="invitation-button invitation-button--ghost">Ver ubicación</span>
+              <span class="invitation-button invitation-button--ghost"><%= label_for(:map_label, "Ver ubicación") %></span>
             <% end %>
           </div>
         </article>
@@ -52,13 +52,13 @@
               <% end %>
               <h3 class="invitation-schedule__item-title"><%= item.title %></h3>
             </div>
-            <p class="invitation-schedule__time"><strong>Hora:</strong> <%= item.time %></p>
-            <p class="invitation-schedule__place"><strong>Lugar:</strong> <%= item.place %></p>
+            <p class="invitation-schedule__time"><strong><%= label_for(:time_label, "Hora") %>:</strong> <%= item.time %></p>
+            <p class="invitation-schedule__place"><strong><%= label_for(:place_label, "Lugar") %>:</strong> <%= item.place %></p>
             <div class="invitation-schedule__action">
               <% if item.map_url && !item.map_url.to_s.empty? %>
-                <a class="invitation-button invitation-button--ghost" href="<%= item.map_url %>" target="_blank" rel="noopener">Ver ubicación</a>
+                <a class="invitation-button invitation-button--ghost" href="<%= item.map_url %>" target="_blank" rel="noopener"><%= label_for(:map_label, "Ver ubicación") %></a>
               <% else %>
-                <span class="invitation-button invitation-button--ghost">Ver ubicación</span>
+                <span class="invitation-button invitation-button--ghost"><%= label_for(:map_label, "Ver ubicación") %></span>
               <% end %>
             </div>
           </article>
@@ -77,13 +77,13 @@
             <% end %>
             <h3 class="invitation-schedule__item-title"><%= item.title %></h3>
           </div>
-          <p class="invitation-schedule__time"><strong>Hora:</strong> <%= item.time %></p>
-          <p class="invitation-schedule__place"><strong>Lugar:</strong> <%= item.place %></p>
+          <p class="invitation-schedule__time"><strong><%= label_for(:time_label, "Hora") %>:</strong> <%= item.time %></p>
+          <p class="invitation-schedule__place"><strong><%= label_for(:place_label, "Lugar") %>:</strong> <%= item.place %></p>
           <div class="invitation-schedule__action">
             <% if item.map_url && !item.map_url.to_s.empty? %>
-              <a class="invitation-button invitation-button--ghost" href="<%= item.map_url %>" target="_blank" rel="noopener">Ver ubicación</a>
+              <a class="invitation-button invitation-button--ghost" href="<%= item.map_url %>" target="_blank" rel="noopener"><%= label_for(:map_label, "Ver ubicación") %></a>
             <% else %>
-              <span class="invitation-button invitation-button--ghost">Ver ubicación</span>
+              <span class="invitation-button invitation-button--ghost"><%= label_for(:map_label, "Ver ubicación") %></span>
             <% end %>
           </div>
         </article>

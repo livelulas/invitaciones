@@ -3,6 +3,8 @@
 <% page_description = seo&.description || "Invitación digital de #{invitation.title}" %>
 <% og_image_url = seo&.image ? absolute_url(seo.image) : nil %>
 <% favicon_url = invitation.assets&.logo ? absolute_url(invitation.assets.logo) : nil %>
+<% language = invitation&.language || "es" %>
+<% og_locale = language.to_s.start_with?("en") ? "en_US" : "es_MX" %>
 
 <title><%= page_title %> | Livelulas</title>
 <meta name="description" content="<%= page_description %>" />
@@ -22,7 +24,10 @@
   <meta property="og:url" content="<%= resource.absolute_url %>" />
 <% end %>
 <meta property="og:site_name" content="Livelulas" />
-<meta property="og:locale" content="es_MX" />
+<meta property="og:locale" content="<%= og_locale %>" />
+<% Array(invitation&.alternate_urls).each do |alternate| %>
+  <link rel="alternate" hreflang="<%= alternate.locale %>" href="<%= absolute_url(alternate.url) %>" />
+<% end %>
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="<%= page_title %>" />

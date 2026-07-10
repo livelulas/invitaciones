@@ -66,6 +66,7 @@
   justify-self: end;
   text-align: right;
   min-width: 0;
+  margin-top: 3rem;
 }
 
 .theme-elena-armando .invitation-hero__main {
@@ -144,6 +145,40 @@
   justify-content: center;
   align-items: center;
   padding: 3rem 1.5rem;
+}
+
+.theme-elena-armando .invitation-language {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 20;
+  display: flex;
+  gap: 0.35rem;
+  padding: 0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  background: rgba(74, 56, 47, 0.45);
+  backdrop-filter: blur(0.35rem);
+}
+
+.theme-elena-armando .invitation-language a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.theme-elena-armando .invitation-language a.is-active {
+  color: #8d5524;
+  background: #faf8f4;
 }
 
 .theme-elena-armando .invitation-hero__logo {

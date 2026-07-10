@@ -6,6 +6,9 @@ module Invitation; end
 
 module Invitation::Calendar
   SUBDOMAIN_ROOT_SLUGS = %w[elena-armando].freeze
+  SLUG_ICS_PATHS = {
+    "elena-armando-en" => "/elena-armando/en/save-the-date.ics"
+  }.freeze
 
   module_function
 
@@ -45,6 +48,7 @@ module Invitation::Calendar
 
   def ics_path(invitation)
     slug = read(invitation, :slug).to_s
+    return SLUG_ICS_PATHS[slug] if SLUG_ICS_PATHS.key?(slug)
     return "/save-the-date.ics" if SUBDOMAIN_ROOT_SLUGS.include?(slug)
 
     "/#{slug}/save-the-date.ics"

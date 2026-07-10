@@ -1,9 +1,11 @@
 <!doctype html>
-<html lang="es">
+<% invitation = data.invitation || site.data.dig(:invitations, data.slug) %>
+<% page_language = invitation&.language || "es" %>
+<% theme_slug = data.slug.to_s.sub(/-en\z/, "") %>
+<html lang="<%= page_language %>">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <% invitation = data.invitation || site.data.dig(:invitations, data.slug) %>
     <%= render "invitation_seo", invitation: invitation, resource: resource %>
     <% if invitation.theme.font_urls.google %>
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +14,7 @@
     <% end %>
     <link rel="stylesheet" href="<%= asset_path :css %>" />
     <style>
-      .theme-<%= data.slug %> {
+      .theme-<%= theme_slug %> {
         --color-bg: <%= invitation.theme.colors.bg %>;
         --color-bg-alt: <%= invitation.theme.colors.bg_alt %>;
         --color-bg-dark: <%= invitation.theme.colors.bg_dark %>;
@@ -38,7 +40,15 @@
     <script src="<%= asset_path :js %>" defer></script>
     <%= live_reload_dev_js %>
   </head>
-  <body class="invitation theme-<%= data.slug %>">
+  <body
+    class="invitation theme-<%= theme_slug %>"
+    data-language="<%= page_language %>"
+    data-alternate-language-url="<%= page_language.to_s.start_with?("en") ? "/elena-armando/" : "/elena-armando/en/" %>"
+  >
+    <nav class="invitation-language" aria-label="Language">
+      <a data-language-link href="/elena-armando/" class="<%= page_language.to_s.start_with?("es") ? "is-active" : "" %>">ES</a>
+      <a data-language-link href="/elena-armando/en/" class="<%= page_language.to_s.start_with?("en") ? "is-active" : "" %>">EN</a>
+    </nav>
     <main class="invitation-page">
       <% if invitation %>
         <%= render Invitation::Page.new(invitation: invitation, slug: data.slug) %>

@@ -1,6 +1,6 @@
-slug: elena-armando
+slug: elena-armando-en
 title: Elena & Armando
-language: es
+language: en
 date: "2026-10-17T16:00:00-06:00"
 rsvp_deadline: "2026-09-04"
 alternate_urls:
@@ -10,25 +10,25 @@ alternate_urls:
     url: "/elena-armando/en/"
 
 labels:
-  schedule_title: "El Itinerario"
-  time_label: "Hora"
-  place_label: "Lugar"
-  map_label: "Ver ubicación"
-  details_title: "Detalles"
-  details_button: "Detalles"
-  location_title: "Hotel Sede"
-  children_note: "Respetuosamente No niños"
-  transfer_label: "Transferencias"
+  schedule_title: "The Itinerary"
+  time_label: "Time"
+  place_label: "Place"
+  map_label: "View location"
+  details_title: "Details"
+  details_button: "Details"
+  location_title: "Host Hotel"
+  children_note: "Respectfully, no children"
+  transfer_label: "Bank Transfer"
 
 calendar:
-  title: "Boda Elena y Armando"
-  description: "Estamos felices de compartir este gran día con ustedes."
+  title: "Elena and Armando's Wedding"
+  description: "We are happy to share this special day with you."
   location: "Parroquia del Rosario | Hacienda M"
   duration_hours: 8
 
 seo:
-  title: "Boda Elena y Armando"
-  description: "Estamos felices de compartir este gran día con ustedes. 17 de Octubre 2026"
+  title: "Elena and Armando's Wedding"
+  description: "We are happy to share this special day with you. October 17, 2026"
   image: "/images/invitations/elena-armando/og-share.png"
 
 theme:
@@ -124,30 +124,30 @@ content:
       - "&"
       - Armando
     venue: "PARROQUIA EL ROSARIO | HACIENDA M"
-    tagline: "EL PRIMER PASO DE NUESTRO \"PARA SIEMPRE\""
-    cta_label: "CONFIRMA AQUÍ"
-    cta_url: "https://wa.me/528134304167?text=%C2%A1Hola!%20Cuenta%20conmigo%20para%20el%20gran%20d%C3%ADa."
+    tagline: "THE FIRST STEP OF OUR FOREVER"
+    cta_label: "RSVP HERE"
+    cta_url: "https://wa.me/528134304167?text=Hello!%20Count%20me%20in%20for%20the%20big%20day."
   story:
-    text: "Bastó una feliz coincidencia para unir nuestros caminos y comenzar a escribir nuestra historia."
-    text_secondary: "Estamos felices de compartir este gran día con ustedes."
+    text: "One happy coincidence was all it took to bring our paths together and begin writing our story."
+    text_secondary: "We are happy to share this special day with you."
     save_label: "Save the Date"
-    countdown_label: "Estamos solo a"
-    countdown_unit: "DÍAS"
-    event_today_message: "HOY ES EL GRAN DÍA"
-    event_past_message: "Gracias por acompañarnos."
+    countdown_label: "Only"
+    countdown_unit: "DAYS TO GO"
+    event_today_message: "TODAY IS THE BIG DAY"
+    event_past_message: "Thank you for joining us."
   parents:
-    title: "Con el Amor de Nuestros Padres"
-    message: "Gracias por ser nuestro ejemplo, nuestro apoyo incondicional y por guiarnos hasta este momento con su amor."
+    title: "With the Love of Our Parents"
+    message: "Thank you for being our example, our unconditional support, and for guiding us to this moment with your love."
     names:
       - "Carmen Ávalos & Rafael Reyes"
       - "Zoveida Serrano & Armando Guerrero"
   schedule:
-    - title: Celebración Religiosa
+    - title: Religious Ceremony
       time: "3:30 PM"
       place: Parroquia del Rosario, Col. Roma
       map_url: "https://maps.app.goo.gl/q3FRED1YYp8hg47e8"
       icon_key: religious
-    - title: Civil
+    - title: Civil Ceremony
       time: "7:15 PM"
       place: Hacienda M
       map_url: "https://maps.app.goo.gl/Wb6VSBdNpuZ2UZT38"
@@ -157,36 +157,36 @@ content:
       place: Hacienda M
       map_url: "https://maps.app.goo.gl/Wb6VSBdNpuZ2UZT38"
       icon_key: ice_breaker
-    - title: Recepción
+    - title: Reception
       time: "8:00 PM"
       place: Hacienda M
       map_url: "https://maps.app.goo.gl/Wb6VSBdNpuZ2UZT38"
       icon_key: reception
   location:
-    title: "Hotel Sede"
-    message: "A todos los que viajan y cruzan distancias para acompañarnos: gracias de corazón por estar con nosotros en el día más importante."
-    details_label: "Detalles"
+    title: "Host Hotel"
+    message: "To everyone traveling and crossing distances to be with us: thank you from the heart for joining us on the most important day."
+    details_label: "Details"
     details_url: "/images/invitations/elena-armando/hospedaje-elena-armando.pdf"
     details_target: "_blank"
-    map_label: "Ver ubicación"
+    map_label: "View location"
     map_url: "https://maps.app.goo.gl/6m2x6MRSAgx2UJ6r7?g_st=ipc"
   details:
-    title: "Detalles"
-    guest_label: "Esta invitación es para"
-    guest_default: "Nuestra familia y amigos"
-    closing_title: "Los esperamos"
-    children_note: "Respetuosamente No niños"
-    dress_code_intro: "Queremos verlos brillar en nuestra celebración."
-    dress_code_women: "Vestido largo formal"
-    dress_code_men: "Traje completo"
-    dress_code_note: "Se solicita evitar vestidos en color blanco o tonos claros."
+    title: "Details"
+    guest_label: "This invitation is for"
+    guest_default: "Our family and friends"
+    closing_title: "We can't wait to see you"
+    children_note: "Respectfully, no children"
+    dress_code_intro: "We want to see you shine at our celebration."
+    dress_code_women: "Formal long dress"
+    dress_code_men: "Full suit"
+    dress_code_note: "Please avoid white or light-colored dresses."
     children: false
-    gift_message: "Su presencia es nuestro mejor regalo. Si desean tener un detalle con nosotros, será recibido con mucho cariño."
-    rsvp_message: "Favor de confirmar su asistencia antes del"
-    transfer_label: "Transferencias"
+    gift_message: "Your presence is our greatest gift. If you wish to give us something, it will be received with much love."
+    rsvp_message: "Please confirm your attendance by"
+    transfer_label: "Bank Transfer"
     transfer:
       name: ELENA REYES AVALOS
       account: "4152313898961854"
   gift:
-    message: "Hagamos que esta noche sea inolvidable."
-    message_secondary: "Gracias por formar parte de nuestra historia"
+    message: "Let's make this night unforgettable."
+    message_secondary: "Thank you for being part of our story"

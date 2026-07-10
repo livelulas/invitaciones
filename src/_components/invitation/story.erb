@@ -81,10 +81,15 @@
         <% end %>
       </div>
 
-      <div class="invitation-story__timer-block" aria-live="polite">
+      <div
+        class="invitation-story__timer-block"
+        aria-live="polite"
+        data-event-today-message="<%= story_content&.event_today_message || "HOY ES EL GRAN DÍA" %>"
+        data-event-past-message="<%= story_content&.event_past_message || "Gracias por acompañarnos." %>"
+      >
         <p class="invitation-story__timer-label" data-countdown-label><%= story_content&.countdown_label || "Estamos solo a" %></p>
         <p class="invitation-story__timer-value" data-countdown-value>
-          <span data-countdown-days>--</span> DÍAS
+          <span data-countdown-days>--</span> <%= story_content&.countdown_unit || "DÍAS" %>
         </p>
       </div>
     </div>

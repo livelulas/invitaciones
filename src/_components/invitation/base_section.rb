@@ -49,12 +49,29 @@ class Invitation::BaseSection < Bridgetown::Component
     icons[key] || icons[key.to_sym]
   end
 
+  def labels
+    invitation.labels || {}
+  end
+
+  def label_for(key, fallback)
+    value = labels.respond_to?(key) ? labels.public_send(key) : labels[key.to_s] || labels[key.to_sym]
+    value.nil? || value.to_s.empty? ? fallback : value
+  end
+
+  def language
+    invitation.respond_to?(:language) ? invitation.language.to_s : "es"
+  end
+
+  def month_names
+    language.start_with?("en") ? ENGLISH_MONTHS : SPANISH_MONTHS
+  end
+
   def formatted_hero_date
     date = invitation.date
     return date unless date
 
     time = Time.parse(date.to_s)
-    month = SPANISH_MONTHS[time.month].upcase
+    month = month_names[time.month].upcase
     "#{month} #{time.day}, #{time.year}"
   rescue ArgumentError
     date
@@ -66,13 +83,19 @@ class Invitation::BaseSection < Bridgetown::Component
     9 => "septiembre", 10 => "octubre", 11 => "noviembre", 12 => "diciembre"
   }.freeze
 
+  ENGLISH_MONTHS = {
+    1 => "January", 2 => "February", 3 => "March", 4 => "April",
+    5 => "May", 6 => "June", 7 => "July", 8 => "August",
+    9 => "September", 10 => "October", 11 => "November", 12 => "December"
+  }.freeze
+
   def formatted_date
     date = invitation.date
     return date unless date
 
     time = Time.parse(date.to_s)
-    month = SPANISH_MONTHS[time.month].upcase
-    "#{time.day} DE #{month} #{time.year}"
+    month = month_names[time.month].upcase
+    language.start_with?("en") ? "#{month} #{time.day}, #{time.year}" : "#{time.day} DE #{month} #{time.year}"
   rescue ArgumentError
     date
   end
@@ -82,7 +105,7 @@ class Invitation::BaseSection < Bridgetown::Component
     return date unless date
 
     time = Time.parse(date.to_s)
-    "#{time.day} de #{SPANISH_MONTHS[time.month]} #{time.year}"
+    language.start_with?("en") ? "#{month_names[time.month]} #{time.day}, #{time.year}" : "#{time.day} de #{month_names[time.month]} #{time.year}"
   rescue ArgumentError
     date
   end
@@ -92,7 +115,7 @@ class Invitation::BaseSection < Bridgetown::Component
     return deadline unless deadline
 
     time = Time.parse(deadline.to_s)
-    "#{time.day} de #{SPANISH_MONTHS[time.month]}"
+    language.start_with?("en") ? "#{month_names[time.month]} #{time.day}" : "#{time.day} de #{month_names[time.month]}"
   rescue ArgumentError
     deadline
   end

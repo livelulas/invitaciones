@@ -24,10 +24,10 @@
           <% end %>
 
           <div class="invitation-details__card-content">
-            <h2 class="invitation-details__heading">Detalles</h2>
+            <h2 class="invitation-details__heading"><%= content_data&.title || label_for(:details_title, "Detalles") %></h2>
 
             <% if content_data&.children == false %>
-              <p class="invitation-details__children">Respetuosamente No niños</p>
+              <p class="invitation-details__children"><%= content_data&.children_note || label_for(:children_note, "Respetuosamente No niños") %></p>
             <% end %>
 
             <div class="invitation-details__dress-intro">
@@ -70,7 +70,7 @@
                   </div>
                 <% end %>
                 <div class="invitation-details__transfer-copy">
-                  <p class="invitation-details__transfer-label">Transferencias</p>
+                  <p class="invitation-details__transfer-label"><%= content_data&.transfer_label || label_for(:transfer_label, "Transferencias") %></p>
                   <p class="invitation-details__transfer-name"><strong><%= transfer.name %></strong></p>
                   <p class="invitation-details__transfer-account"><%= transfer.account %></p>
                 </div>

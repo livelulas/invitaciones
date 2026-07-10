@@ -26,13 +26,13 @@ function updateCountdown(section) {
 
   if (nowDate >= targetDay && nowDate < nextDay) {
     if (labelEl) labelEl.textContent = ""
-    if (valueEl) valueEl.textContent = "HOY ES EL GRAN DÍA"
+    if (valueEl) valueEl.textContent = valueEl.parentElement.dataset.eventTodayMessage || "HOY ES EL GRAN DÍA"
     return
   }
 
   if (nowDate >= nextDay) {
     if (labelEl) labelEl.textContent = ""
-    if (valueEl) valueEl.textContent = "Gracias por acompañarnos."
+    if (valueEl) valueEl.textContent = valueEl.parentElement.dataset.eventPastMessage || "Gracias por acompañarnos."
     return
   }
 

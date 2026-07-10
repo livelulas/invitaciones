@@ -18,9 +18,10 @@ class Builders::CalendarBuilder < SiteBuilder
       ics_content = Invitation::Calendar.generate_ics(invitation, slug: slug.to_s)
       next if ics_content.nil? || ics_content.empty?
 
-      slug_dir = File.join(site.dest, slug.to_s)
-      FileUtils.mkdir_p(slug_dir)
-      File.write(File.join(slug_dir, "save-the-date.ics"), ics_content)
+      ics_path = Invitation::Calendar.ics_path(invitation).sub(%r{\A/}, "")
+      output_path = File.join(site.dest, ics_path)
+      FileUtils.mkdir_p(File.dirname(output_path))
+      File.write(output_path, ics_content)
 
       next unless Invitation::Calendar::SUBDOMAIN_ROOT_SLUGS.include?(slug.to_s)
 

@@ -12,7 +12,7 @@
     </div>
 
     <div class="invitation-location__copy">
-      <h2 class="invitation-location__title"><%= content_data&.title || "Hotel Sede" %></h2>
+      <h2 class="invitation-location__title"><%= content_data&.title || label_for(:location_title, "Hotel Sede") %></h2>
       <% if content_data&.message %>
         <p class="invitation-location__message"><%= content_data.message %></p>
       <% end %>
@@ -26,18 +26,18 @@
               rel="noopener"
             <% end %>
           >
-            <%= content_data.details_label || "Detalles" %>
+            <%= content_data.details_label || label_for(:details_button, "Detalles") %>
           </a>
         <% else %>
-          <span class="invitation-button invitation-button--light invitation-button--ghost"><%= content_data&.details_label || "Detalles" %></span>
+          <span class="invitation-button invitation-button--light invitation-button--ghost"><%= content_data&.details_label || label_for(:details_button, "Detalles") %></span>
         <% end %>
 
         <% if content_data&.map_url && !content_data.map_url.to_s.empty? %>
           <a class="invitation-button invitation-button--light" href="<%= content_data.map_url %>" target="_blank" rel="noopener">
-            <%= content_data.map_label || "Ver ubicación" %>
+            <%= content_data.map_label || label_for(:map_label, "Ver ubicación") %>
           </a>
         <% else %>
-          <span class="invitation-button invitation-button--light invitation-button--ghost"><%= content_data&.map_label || "Ver ubicación" %></span>
+          <span class="invitation-button invitation-button--light invitation-button--ghost"><%= content_data&.map_label || label_for(:map_label, "Ver ubicación") %></span>
         <% end %>
       </div>
     </div>
