@@ -43,11 +43,11 @@
   <body
     class="invitation theme-<%= theme_slug %>"
     data-language="<%= page_language %>"
-    data-alternate-language-url="<%= page_language.to_s.start_with?("en") ? "/elena-armando/" : "/elena-armando/en/" %>"
+    data-alternate-language-url="<%= page_language.to_s.start_with?("en") ? "/" : "/en/" %>"
   >
     <nav class="invitation-language" aria-label="Language">
-      <a data-language-link href="/elena-armando/" class="<%= page_language.to_s.start_with?("es") ? "is-active" : "" %>">ES</a>
-      <a data-language-link href="/elena-armando/en/" class="<%= page_language.to_s.start_with?("en") ? "is-active" : "" %>">EN</a>
+      <a data-language-link data-language-target="es" href="/" class="<%= page_language.to_s.start_with?("es") ? "is-active" : "" %>">ES</a>
+      <a data-language-link data-language-target="en" href="/en/" class="<%= page_language.to_s.start_with?("en") ? "is-active" : "" %>">EN</a>
     </nav>
     <main class="invitation-page">
       <% if invitation %>

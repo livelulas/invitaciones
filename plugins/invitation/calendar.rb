@@ -7,7 +7,7 @@ module Invitation; end
 module Invitation::Calendar
   SUBDOMAIN_ROOT_SLUGS = %w[elena-armando].freeze
   SLUG_ICS_PATHS = {
-    "elena-armando-en" => "/elena-armando/en/save-the-date.ics"
+    "elena-armando-en" => "/en/save-the-date.ics"
   }.freeze
 
   module_function
