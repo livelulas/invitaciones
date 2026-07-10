@@ -36,6 +36,7 @@ frontend/javascript/       # Countdown + guest name
 ## Documentación
 
 - [Crear nueva invitación](docs/new-invitation.md)
+- [Enlaces personalizados por invitado (Excel)](docs/guest-links-excel.md)
 - [Deploy Cloudflare Pages](docs/deploy-cloudflare.md)
 - [Generator fase 2](docs/generator-phase-2.md)
 

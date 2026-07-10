@@ -92,7 +92,8 @@
 
       <%= render Invitation::GuestName.new(
         invitation: invitation,
-        label: content_data&.guest_label
+        label: content_data&.guest_label,
+        default: content_data&.guest_default
       ) %>
 
       <p class="invitation-details__rsvp">

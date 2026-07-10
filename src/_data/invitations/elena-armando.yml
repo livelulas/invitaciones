@@ -209,6 +209,7 @@ content:
             prices: "Sencilla o Doble $1,889 | Triple $2,129 | Cuádruple $2,365"
   details:
     guest_label: "Esta invitación es para"
+    guest_default: "Nuestra familia y amigos"
     closing_title: "Los esperamos"
     dress_code_intro: "Queremos verlos brillar en nuestra celebración."
     dress_code_women: "Vestido largo formal"
