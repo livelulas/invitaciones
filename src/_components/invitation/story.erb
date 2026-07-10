@@ -82,8 +82,8 @@
       </div>
 
       <div class="invitation-story__timer-block" aria-live="polite">
-        <p class="invitation-story__timer-label"><%= story_content&.countdown_label || "Estamos solo a" %></p>
-        <p class="invitation-story__timer-value">
+        <p class="invitation-story__timer-label" data-countdown-label><%= story_content&.countdown_label || "Estamos solo a" %></p>
+        <p class="invitation-story__timer-value" data-countdown-value>
           <span data-countdown-days>--</span> DÍAS
         </p>
       </div>

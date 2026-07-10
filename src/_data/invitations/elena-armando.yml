@@ -1,8 +1,7 @@
 slug: elena-armando
 title: Elena & Armando
-event_type: wedding
 date: "2026-10-17T16:00:00-06:00"
-rsvp_deadline: "2026-09-17"
+rsvp_deadline: "2026-09-04"
 
 calendar:
   title: "Boda Elena y Armando"
@@ -72,55 +71,33 @@ sections:
     background_color: null
     background_image: "/images/invitations/elena-armando/elements/4.svg"
     text_color: "#ffffff"
-  intro:
-    enabled: false
-    background_color: null
-    background_image: null
-    text_color: null
-  countdown:
-    enabled: false
-    background_color: "#4a382f"
-    background_image: null
-    text_color: "#ffffff"
   story:
     enabled: true
     background_color: null
-    background_image: null
     text_color: null
   parents:
     enabled: true
     background_color: null
-    background_image: null
     text_color: null
   gallery:
     enabled: true
     background_color: null
-    background_image: null
     text_color: null
   schedule:
     enabled: true
     background_color: null
-    background_image: null
     text_color: null
   location:
     enabled: true
     background_color: "#9f6e40"
-    background_image: null
     text_color: "#ffffff"
-  lodging:
-    enabled: false
-    background_color: "#ffffff"
-    background_image: null
-    text_color: null
   details:
     enabled: true
     background_color: null
-    background_image: null
     text_color: null
   gift:
     enabled: true
     background_color: null
-    background_image: null
     text_color: "#ffffff"
 
 content:
@@ -138,12 +115,6 @@ content:
     text_secondary: "Estamos felices de compartir este gran día con ustedes."
     save_label: "Save the Date"
     countdown_label: "Estamos solo a"
-    save_label: "Save the Date"
-    countdown_label: "Estamos solo a"
-  intro:
-    title: "Gracias a una feliz coincidencia"
-    text: "para unir nuestros caminos y comenzar a escribir nuestra historia."
-    text_secondary: "Estamos felices de compartir este gran día con ustedes."
   parents:
     title: "Con el Amor de Nuestros Padres"
     message: "Gracias por ser nuestro ejemplo, nuestro apoyo incondicional y por guiarnos hasta este momento con su amor."
@@ -152,27 +123,23 @@ content:
       - "Zoveida Serrano & Armando Guerrero"
   schedule:
     - title: Celebración Religiosa
-      time: "4:00 PM"
+      time: "3:30 PM"
       place: Parroquia del Rosario, Col. Roma
-      address: ""
       map_url: "https://maps.app.goo.gl/q3FRED1YYp8hg47e8"
       icon_key: religious
     - title: Civil
       time: "7:15 PM"
       place: Hacienda M
-      address: ""
       map_url: "https://maps.app.goo.gl/Wb6VSBdNpuZ2UZT38"
       icon_key: civil
     - title: Ice Breaker
       time: "7:30 PM"
       place: Hacienda M
-      address: ""
       map_url: "https://maps.app.goo.gl/Wb6VSBdNpuZ2UZT38"
       icon_key: ice_breaker
     - title: Recepción
       time: "8:00 PM"
       place: Hacienda M
-      address: ""
       map_url: "https://maps.app.goo.gl/Wb6VSBdNpuZ2UZT38"
       icon_key: reception
   location:
@@ -183,31 +150,6 @@ content:
     details_target: "_blank"
     map_label: "Ver ubicación"
     map_url: "https://maps.app.goo.gl/6m2x6MRSAgx2UJ6r7?g_st=ipc"
-  lodging:
-    title: "Hotel Crowne Plaza"
-    phone: "800 839 9300"
-    image: "/images/invitations/elena-armando/hospedaje-elena-armando.png"
-    blocks:
-      - name: "Plan Europeo"
-        code: "EAD"
-        note: "Desayuno incluido"
-        rates:
-          - label: Estándar
-            prices: "Sencilla $1,627 | Doble $1,862 | Triple $2,335 | Cuádruple $2,808"
-          - label: Superior
-            prices: "Sencilla $1,865 | Doble $2,100 | Triple $2,573 | Cuádruple $3,046"
-          - label: Ejecutivo
-            prices: "Sencilla $2,103 | Doble $2,338 | Triple $2,811 | Cuádruple $3,284"
-      - name: "Plan Europeo"
-        code: "EAE"
-        note: "Desayuno incluido"
-        rates:
-          - label: Estándar
-            prices: "Sencilla o Doble $1,413 | Triple $1,651 | Cuádruple $1,889"
-          - label: Superior
-            prices: "Sencilla o Doble $1,651 | Triple $1,889 | Cuádruple $2,127"
-          - label: Ejecutivo
-            prices: "Sencilla o Doble $1,889 | Triple $2,129 | Cuádruple $2,365"
   details:
     guest_label: "Esta invitación es para"
     guest_default: "Nuestra familia y amigos"
