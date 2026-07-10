@@ -4,8 +4,14 @@ import { initCountdown } from "./countdown"
 import { initGuestName } from "./guest_name"
 import { initCalendarLinks } from "./calendar"
 
-document.addEventListener("DOMContentLoaded", () => {
+function boot() {
   initCountdown()
   initGuestName()
   initCalendarLinks()
-})
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", boot)
+} else {
+  boot()
+}

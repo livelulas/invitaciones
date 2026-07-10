@@ -4,6 +4,7 @@ export function initGuestName() {
   const elements = document.querySelectorAll("[data-guest-name]")
 
   elements.forEach((element) => {
-    element.textContent = guest || "Nuestra familia y amigos"
+    const fallback = element.dataset.guestDefault || "Nuestra familia y amigos"
+    element.textContent = guest || fallback
   })
 }

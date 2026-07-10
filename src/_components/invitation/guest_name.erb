@@ -1,4 +1,14 @@
 <p class="invitation-guest" data-guest-label="<%= label %>">
   <%= label %>
-  <strong data-guest-name>cargando...</strong>
+  <strong data-guest-name data-guest-default="<%= default %>"><%= default %></strong>
 </p>
+<script>
+  (function () {
+    var guest = new URLSearchParams(window.location.search).get("guest")
+    if (!guest) return
+
+    document.querySelectorAll("[data-guest-name]").forEach(function (element) {
+      element.textContent = guest
+    })
+  })()
+</script>
