@@ -181,7 +181,7 @@ content:
     details_label: "Detalles"
     details_url: "#details"
     map_label: "Ver ubicación"
-    map_url: ""
+    map_url: "https://maps.app.goo.gl/6m2x6MRSAgx2UJ6r7?g_st=ipc"
   lodging:
     title: "Hotel Crowne Plaza"
     phone: "800 839 9300"
