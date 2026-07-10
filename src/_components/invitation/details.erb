@@ -30,21 +30,31 @@
               <p class="invitation-details__children">Respetuosamente No niños</p>
             <% end %>
 
-            <h3 class="invitation-details__subheading">Dress Code</h3>
+            <div class="invitation-details__dress-intro">
+              <h3 class="invitation-details__subheading">Dress Code</h3>
 
-            <% if content_data&.dress_code_intro %>
-              <p class="invitation-details__text"><%= content_data.dress_code_intro %></p>
-            <% end %>
+              <% if content_data&.dress_code_intro %>
+                <p class="invitation-details__text"><%= content_data.dress_code_intro %></p>
+              <% end %>
+            </div>
 
-            <% if content_data&.dress_code_women %>
-              <p class="invitation-details__dress-code"><strong><%= content_data.dress_code_women %></strong></p>
-            <% end %>
-            <% if content_data&.dress_code_men %>
-              <p class="invitation-details__dress-code"><strong><%= content_data.dress_code_men %></strong></p>
+            <% if content_data&.dress_code_women || content_data&.dress_code_men %>
+              <div class="invitation-details__dress-codes">
+                <% if content_data&.dress_code_women %>
+                  <p class="invitation-details__dress-code"><strong><%= content_data.dress_code_women %></strong></p>
+                <% end %>
+                <% if content_data&.dress_code_men %>
+                  <p class="invitation-details__dress-code"><strong><%= content_data.dress_code_men %></strong></p>
+                <% end %>
+              </div>
             <% end %>
 
             <% if content_data&.dress_code_note %>
               <p class="invitation-details__dress-note"><%= content_data.dress_code_note %></p>
+            <% end %>
+
+            <% if content_data&.gift_message %>
+              <p class="invitation-details__gift-message"><%= content_data.gift_message %></p>
             <% end %>
 
             <% if transfer %>

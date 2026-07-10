@@ -159,9 +159,10 @@ content:
     dress_code_men: "Traje completo"
     dress_code_note: "Se solicita evitar vestidos en color blanco o tonos claros."
     children: false
+    gift_message: "Su presencia es nuestro mejor regalo. Si desean tener un detalle con nosotros, será recibido con mucho cariño."
     rsvp_message: "Favor de confirmar su asistencia antes del"
     transfer:
-      name: Elena Reyes Ávalos
+      name: ELENA REYES AVALOS
       account: "4152313898961854"
   gift:
     message: "Hagamos que esta noche sea inolvidable."
