@@ -5,30 +5,11 @@
       <span class="home-hero__title-line">de invitar a tu</span>
       <span class="home-hero__title-line home-hero__title-line--accent">boda</span>
     </h1>
-    <a class="home-cta" href="#invitaciones">Ver invitaciones</a>
+    <a class="home-cta" href="#contacto">Cotiza tu invitación</a>
   </div>
 </section>
 
-<section class="home-invitations" id="invitaciones">
-  <div class="home-invitations__inner">
-    <h2 class="home-section__title">Invitaciones</h2>
-    <p class="home-section__lead">Explora nuestros diseños digitales listos para personalizar.</p>
-
-    <ul class="home-invitations__list">
-      <% invitations.each do |item| %>
-        <li>
-          <a class="home-invitation-card" href="<%= item[:url] %>">
-            <span class="home-invitation-card__label">Invitación digital</span>
-            <span class="home-invitation-card__title"><%= item[:title] %></span>
-            <span class="home-invitation-card__action">Ver invitación</span>
-          </a>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</section>
-
-<section class="home-contact">
+<section class="home-contact" id="contacto">
   <div class="home-contact__inner">
     <h2 class="home-section__title">Nos encantaría ser parte de su historia</h2>
     <p class="home-section__lead">Envíanos un mensaje y hacemos su idea realidad.</p>
