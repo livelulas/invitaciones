@@ -35,12 +35,9 @@ theme:
 
 assets:
   logo: "/images/invitations/elena-armando/elements/logo-ea-white.png"
-  flourish: "/images/invitations/elena-armando/elements/12.svg"
-  hero_photo: "/images/invitations/elena-armando/elements/4.svg"
   story_graphic: "/images/invitations/elena-armando/elements/story-graphic.png"
   story_bg: "/images/invitations/elena-armando/elements/story-bg.png"
   intro_photo: "/images/invitations/elena-armando/elements/story-photo.png"
-  countdown_photo: "/images/invitations/elena-armando/elements/5.svg"
   parents_clip: "/images/invitations/elena-armando/elements/parents-clip.png"
   parents_separator: "/images/invitations/elena-armando/elements/parents-separator.png"
   parents_photo: "/images/invitations/elena-armando/elements/parents-photo.png"
