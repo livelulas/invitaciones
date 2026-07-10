@@ -18,7 +18,14 @@
       <% end %>
       <div class="invitation-location__actions">
         <% if content_data&.details_url && !content_data.details_url.to_s.empty? %>
-          <a class="invitation-button invitation-button--light" href="<%= content_data.details_url %>">
+          <a
+            class="invitation-button invitation-button--light"
+            href="<%= content_data.details_url %>"
+            <% if content_data&.details_target %>
+              target="<%= content_data.details_target %>"
+              rel="noopener"
+            <% end %>
+          >
             <%= content_data.details_label || "Detalles" %>
           </a>
         <% else %>
