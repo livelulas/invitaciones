@@ -4,25 +4,17 @@ function updateCountdown(section) {
 
   const targetDate = new Date(eventDate)
   const nowDate = new Date()
-  const target = targetDate.getTime()
-  const now = nowDate.getTime()
-  const distance = Math.max(target - now, 0)
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000)
 
   const labelEl = section.querySelector("[data-countdown-label]")
   const valueEl = section.querySelector("[data-countdown-value]")
   const daysEl = section.querySelector("[data-countdown-days]")
-  const hoursEl = section.querySelector("[data-countdown-hours]")
-  const minutesEl = section.querySelector("[data-countdown-minutes]")
-  const secondsEl = section.querySelector("[data-countdown-seconds]")
 
   const targetDay = new Date(targetDate.getFullYear(), targetDate.getMonth(), targetDate.getDate())
+  const today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate())
   const nextDay = new Date(targetDay)
   nextDay.setDate(targetDay.getDate() + 1)
+  const dayDistance = Math.max(targetDay.getTime() - today.getTime(), 0)
+  const days = Math.floor(dayDistance / (1000 * 60 * 60 * 24))
 
   if (nowDate >= targetDay && nowDate < nextDay) {
     if (labelEl) labelEl.textContent = ""
@@ -37,9 +29,6 @@ function updateCountdown(section) {
   }
 
   if (daysEl) daysEl.textContent = String(days)
-  if (hoursEl) hoursEl.textContent = String(hours).padStart(2, "0")
-  if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, "0")
-  if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, "0")
 }
 
 export function initCountdown() {
